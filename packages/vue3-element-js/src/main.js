@@ -1,4 +1,4 @@
-import "./plugins/inject.js";
+import "@/config/boot.js";
 import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router";

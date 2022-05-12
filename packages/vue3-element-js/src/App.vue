@@ -3,11 +3,11 @@
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
 </script>
 
-<template>  
+<template>
   <div class="test">
     <ThemeButton></ThemeButton>
-    <div class="test-content">asdfasdf</div>
-    <el-button>123123123</el-button>
+    <!-- 标签切换 -->
+    <router-view></router-view>
   </div>
 </template>
 
