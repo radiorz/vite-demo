@@ -39,7 +39,7 @@ const { t } = useI18n();
 .common-layout {
   height: 100vh;
   .brand {
-    @apply w-64 bg-black;
+    @apply shrink-0 w-64 bg-black;
   }
   .header {
     @apply bg-primary text-white flex p-0;
