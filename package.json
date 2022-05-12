@@ -14,7 +14,11 @@
     "boot": "lerna bootstrap",
     "patch": "lerna version patch --conventional-commits --yes",
     "dev": "yarn workspace <packagename> dev",
-    "docs": "yarn workspace docs dev"
+    "docs": "yarn workspace docs dev",
+    "vej:dev": "yarn workspace vue3-element-js dev",
+    "vat:dev": "yarn workspace vue3-antd dev",
+    "vvt:dev": "yarn workspace vue3-vuetify dev",
+    "vet:dev": "yarn workspace vue3-element dev"
   },
   "repository": {
     "type": "git",

@@ -1,0 +1,5 @@
+node_modules**
+/lerna-debug.log
+.temp
+
+vendor 添加 tags 再放入文件
