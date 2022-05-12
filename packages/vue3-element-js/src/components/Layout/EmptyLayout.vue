@@ -6,19 +6,19 @@
 -->
 
 <script>
-import { defineComponent } from 'vue'
+import { defineComponent } from "vue";
 export default defineComponent({
-  name: 'Empty',
+  name: "Empty",
   setup() {},
   data() {
-    return { a: 123 }
-  }
-})
+    return { a: 123 };
+  },
+});
 </script>
 
 <template>
-  {{ a }}
-  <router-view></router-view>
+  <span> {{ a }}</span>
+  <router-view />
 </template>
 
 <style></style>

@@ -6,13 +6,32 @@
 -->
 
 <script setup>
-
+import { useI18n } from "vue-i18n";
+const { t } = useI18n();
+const links = [
+  { name: "home", path: "/" },
+  { name: "about", path: "/" },
+  { name: "test", path: "/" },
+];
 </script>
 
 <template>
-  <div class='home'>
-    this.home page
-    <router-view></router-view>
+  <div class="home">
+    <!-- 这个后期可以使用可变的layout -->
+    <CommonLayout>
+      <template v-slot:header>
+        <h1>{{ t("default.title") }}</h1>
+      </template>
+      <template v-slot:aside>
+        <ul>
+          <li v-for="(link, index) in links" :key="index">
+            <router-link :to="link.path">{{ t(link.name) }}</router-link>
+          </li>
+        </ul>
+      </template>
+      this is main
+      <router-view></router-view>
+    </CommonLayout>
   </div>
 </template>
 

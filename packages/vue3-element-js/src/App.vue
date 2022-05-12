@@ -5,7 +5,6 @@
 
 <template>
   <div class="test">
-    <ThemeButton></ThemeButton>
     <!-- 标签切换 -->
     <router-view></router-view>
   </div>
