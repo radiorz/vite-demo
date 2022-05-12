@@ -10,14 +10,14 @@
 <template>
   <div class="common-layout">
     <el-container>
-      <el-header>
+      <el-header class="bg-indigo-500 flex-center">
         <slot name="header"></slot>
       </el-header>
       <el-container>
-        <el-aside width="200px">
+        <el-aside width="200px" class="flex-center">
           <slot name="aside"></slot>
         </el-aside>
-        <el-main>
+        <el-main class="flex-center">
           <slot></slot>
         </el-main>
       </el-container>

@@ -1,17 +1,17 @@
 <!--
 * @FileDescription: 该文件的描述信息
-* @Date: 2022年01月05日 11:15:27
+* @Date: 2022年05月12日 16:26:27
 * TODO:
 * [] 
 -->
 
-<script setup></script>
+<script setup>
+
+</script>
 
 <template>
-  <div>
-    <slot>
-      <router-view />
-    </slot>
+  <div class='app'>
+    <router-view></router-view>
   </div>
 </template>
 

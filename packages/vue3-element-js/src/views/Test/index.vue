@@ -6,13 +6,12 @@
 -->
 
 <script setup>
-// import { inject } from "vue";
 const $log = inject("$log");
-$log.debug(123);
+$log.debug("this is test page");
 </script>
 
 <template>
-  <div class="test">this is test page</div>
+  <EmptyLayout></EmptyLayout>
 </template>
 
 <style></style>

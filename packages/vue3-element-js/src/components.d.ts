@@ -6,7 +6,6 @@ import '@vue/runtime-core'
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     CommonLayout: typeof import('./components/Layout/CommonLayout.vue')['default']
-    DarkLightToggle: typeof import('./components/DarkLightToggle.vue')['default']
     ElAside: typeof import('element-plus/es')['ElAside']
     ElContainer: typeof import('element-plus/es')['ElContainer']
     ElHeader: typeof import('element-plus/es')['ElHeader']
@@ -15,8 +14,6 @@ declare module '@vue/runtime-core' {
     HelloWorld: typeof import('./components/HelloWorld.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    ThemeButton: typeof import('./components/ThemeButton.vue')['default']
-    ThemeDark: typeof import('./components/ThemeDark.vue')['default']
     ThemeSwitch: typeof import('./components/ThemeSwitch.vue')['default']
     ToggleDark: typeof import('./components/ToggleDark.vue')['default']
   }

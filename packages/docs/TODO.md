@@ -1,0 +1,6 @@
+- 国际化
+- 主题定制
+- vue-router
+- pinia
+- ui 组件库
+- tailwindcss
