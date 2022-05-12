@@ -5,12 +5,16 @@ import '@vue/runtime-core'
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    AsideMenu: typeof import('./components/AsideMenu.vue')['default']
     CommonLayout: typeof import('./components/Layout/CommonLayout.vue')['default']
+    DefaultLoading: typeof import('./components/Loading/DefaultLoading.vue')['default']
     ElAside: typeof import('element-plus/es')['ElAside']
     ElContainer: typeof import('element-plus/es')['ElContainer']
     ElHeader: typeof import('element-plus/es')['ElHeader']
     ElMain: typeof import('element-plus/es')['ElMain']
+    ElMenu: typeof import('element-plus/es')['ElMenu']
     EmptyLayout: typeof import('./components/Layout/EmptyLayout.vue')['default']
+    HeaderLayout: typeof import('./components/Layout/HeaderLayout.vue')['default']
     HelloWorld: typeof import('./components/HelloWorld.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']

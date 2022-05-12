@@ -11,7 +11,9 @@ $log.debug("this is test page");
 </script>
 
 <template>
-  <EmptyLayout></EmptyLayout>
+  <HeaderLayout>
+    <template v-slot:header> this is test</template>
+  </HeaderLayout>
 </template>
 
 <style></style>

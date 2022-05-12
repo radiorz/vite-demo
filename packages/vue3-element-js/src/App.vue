@@ -4,7 +4,7 @@
 </script>
 
 <template>
-  <div class="test">
+  <div class="app">
     <!-- 标签切换 -->
     <router-view></router-view>
   </div>

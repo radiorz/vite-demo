@@ -5,19 +5,29 @@
 * [] 
 -->
 
-<script setup></script>
+<script setup>
+import { useI18n } from "vue-i18n";
+
+const { t } = useI18n();
+</script>
 
 <template>
   <div class="common-layout">
     <el-container>
-      <el-header class="bg-indigo-500 flex-center">
-        <slot name="header"></slot>
+      <el-header class="header">
+        <div class="brand flex-center">
+          <slot name="brand">{{ t("platform.title") }}</slot>
+        </div>
+        <!-- FIXME 此处有bug -->
+        <div class="flex-center w-full">
+          <slot name="header"></slot>
+        </div>
       </el-header>
       <el-container>
-        <el-aside width="200px" class="flex-center">
+        <el-aside class="aside flex-center">
           <slot name="aside"></slot>
         </el-aside>
-        <el-main class="flex-center">
+        <el-main class="main flex-center">
           <slot></slot>
         </el-main>
       </el-container>
@@ -25,4 +35,23 @@
   </div>
 </template>
 
-<style></style>
+<style lang="scss" scoped>
+.common-layout {
+  height: 100vh;
+  .brand {
+    @apply w-64 bg-black;
+  }
+  .header {
+    @apply bg-primary text-white flex p-0;
+  }
+  .aside {
+    @apply w-64 bg-secondary;
+  }
+  .main {
+    @apply p-0 w-full;
+  }
+  .el-container {
+    height: 100%;
+  }
+}
+</style>

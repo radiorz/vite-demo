@@ -10,6 +10,7 @@
 <template>
   <div>
     <slot>
+      123
       <router-view />
     </slot>
   </div>
