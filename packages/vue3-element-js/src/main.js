@@ -1,4 +1,5 @@
-import "@/config/boot.js";
+import "@/plugins/globalInject";
+import inject from "@/plugins/inject";
 import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router";
@@ -8,5 +9,6 @@ import router from "./router";
 
 import "@/style/main.css";
 const app = createApp(App);
+inject(app);
 app.use(router);
 app.mount("#app");

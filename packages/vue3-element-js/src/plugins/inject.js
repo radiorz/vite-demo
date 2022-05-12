@@ -1,5 +1,5 @@
-window.isDev = process.env.NODE_ENV === "development";
-window.isProd = process.env.NODE_ENV === "production";
-window.isTest = process.env.NODE_ENV === "test";
-import logger from "./logger";
-window.logger = logger;
+import logger from "./logger.js";
+export default (app) => {
+  app.provide("$log", logger);
+  app.config.globalProperties.$log = logger;
+};

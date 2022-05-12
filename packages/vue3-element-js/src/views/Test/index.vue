@@ -6,13 +6,12 @@
 -->
 
 <script setup>
-
+import {inject} from "vue";
+$log.debug(123)
 </script>
 
 <template>
-  <div class='test'>
-    this is test page
-  </div>
+  <div class="test">this is test page</div>
 </template>
 
 <style></style>

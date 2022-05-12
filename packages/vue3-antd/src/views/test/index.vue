@@ -20,7 +20,10 @@ export default defineComponent({
   },
   // computed:{},
   // watch:{},
-  // create(){},
+  created() {
+    console.log(`this.$log`,this.$log)
+    this.$log.info("i am test");
+  },
   // methods:{}
 });
 </script>
