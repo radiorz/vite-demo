@@ -7,7 +7,10 @@ import vue from "@vitejs/plugin-vue";
 import { join, resolve } from "path";
 import "./config/index";
 
-// https://vitejs.dev/config/
+/**
+ * https://vitejs.dev/config/
+ * @type {import('vite').UserConfig}
+ */
 export default () => {
   const build = {};
   // output 去向

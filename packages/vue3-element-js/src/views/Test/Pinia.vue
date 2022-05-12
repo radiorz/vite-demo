@@ -6,8 +6,11 @@
 -->
 
 <script setup>
+import { useUserStore } from "@/stores/user";
 const $log = inject("$log");
-$log(123);
+const { name } = useUserStore();
+$log.info(`user`, name);
+$log.info(123);
 </script>
 
 <template>
