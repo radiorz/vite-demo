@@ -29,10 +29,15 @@ export default () => {
       },
     },
     plugins: [
+      // 自动导入
       AutoImport({
+        dts: "src/auto-imports.d.ts", // 记录
+        imports: ["vue"],
         resolvers: [ElementPlusResolver()],
       }),
+      // 自动导入组件
       Components({
+        dts: "src/components.d.ts", // 记录
         resolvers: [ElementPlusResolver()],
       }),
       vue(),

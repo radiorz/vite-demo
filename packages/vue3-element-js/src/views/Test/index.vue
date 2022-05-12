@@ -6,8 +6,9 @@
 -->
 
 <script setup>
-import {inject} from "vue";
-$log.debug(123)
+// import { inject } from "vue";
+const $log = inject("$log");
+$log.debug(123);
 </script>
 
 <template>

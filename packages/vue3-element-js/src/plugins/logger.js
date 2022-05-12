@@ -7,7 +7,7 @@ const LOG_LEVELS = {
   ERROR: 4,
   FATAL: 5,
 };
-const isDev = false; // process.env.NODE_ENV === "development";
+const isDev = process.env.NODE_ENV === "development";
 
 function getLogger(level) {
   const adapter = Object.assign({}, console);
