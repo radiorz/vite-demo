@@ -7,8 +7,11 @@ export default {
     language: "语言",
   },
   theme: {
-    notFound: '主题不存在',
-    empty: '主题为空'
+    notFound: "主题不存在",
+    empty: "主题为空",
+    light: "亮色主题",
+    dark: "暗色主题",
+    'tiger-theme': "虎年主题",
   },
   platform: { title: "平台标题" },
   app: {

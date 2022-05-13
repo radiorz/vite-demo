@@ -42,10 +42,10 @@ const { t } = useI18n();
     @apply shrink-0 w-64 bg-black;
   }
   .header {
-    @apply bg-primary text-white flex p-0;
+    @apply bg-main text-white flex p-0;
   }
   .aside {
-    @apply w-64 bg-secondary;
+    @apply w-64 bg-nav;
   }
   .main {
     @apply p-0 w-full;

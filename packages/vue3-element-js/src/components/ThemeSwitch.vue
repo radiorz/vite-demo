@@ -6,14 +6,20 @@
 -->
 
 <script setup>
-// 主题名称列表
-const themeList = ["light-theme", "dark-theme", "tiger-theme"];
-
+import { useI18n } from "vue-i18n";
+import { themeList, setTheme } from "@/composables/theme";
+const { t } = useI18n();
 </script>
 
 <template>
   <div>
-
+    <el-button
+      v-for="(theme, index) in themeList"
+      :key="index"
+      @click="setTheme(theme)"
+    >
+      {{ t(`theme.${theme}`) }}
+    </el-button>
   </div>
 </template>
 

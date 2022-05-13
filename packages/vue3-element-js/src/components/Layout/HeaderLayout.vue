@@ -10,7 +10,7 @@
 <template>
   <div class="header-layout">
     <el-container>
-      <el-header class="bg-primary text-white flex-center">
+      <el-header class="bg-main text-white flex-center">
         <slot name="header"></slot>
       </el-header>
       <el-main class="p-0 m-0">

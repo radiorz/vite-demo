@@ -1,1 +1,11 @@
-:root
+/* 默认主题色，即 Light 日间主题颜色 */
+:root {
+  --color-highlight: 59, 130, 246;
+  --color-bg-base: 249, 250, 251;
+  --color-bg-nav: 243, 244, 246;
+  --color-text-main: 31, 41, 55;
+  --color-text-muted: 243, 244, 246;
+  --color-text-invert: 249, 250, 251;
+  --color-fill-main: 59, 130, 246;
+  --color-fill-muted: 191, 219, 254;
+}

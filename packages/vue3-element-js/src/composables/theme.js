@@ -1,18 +1,21 @@
 // 切换 theme
+
+// import { useI18n } from "vue-i18n";
+
+// const { t } = useI18n();
 // 主题名称列表
-const themeList = ["light", "dark", "tiger-theme"];
-import i18n from "./i18n";
+export const themeList = ["light", "dark", "tiger-theme"];
 /**
  * set theme to body
  * @param {*} theme
  */
 export function setTheme(theme) {
   if (!theme) {
-    $log.warn(i18n.global.t("theme.notEmpty"));
+    $log.warn($i18n.t("theme.empty"));
     return;
   }
   if (!themeList.includes(theme)) {
-    $log.warn(i18n.global.t("theme.notFound"));
+    $log.warn($i18n.t("theme.notFound"));
     return;
   }
   // const body = document.body;
@@ -20,8 +23,9 @@ export function setTheme(theme) {
   //   body.removeAttribute(item);
   // });
   // body.setAttribute(theme);
-  const theme = document.documentElement.getAttribute("data-theme");
-  if (theme) {
-  }
+  // const theme = document.documentElement.getAttribute("data-theme");
+  // if (theme) {
+
+  // }
   document.documentElement.setAttribute("data-theme", theme);
 }

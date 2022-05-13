@@ -18,15 +18,10 @@ let theme = "light";
     <p class="text-blue-500">
       122312333333333333333333333333111111111111111111111111111111111111111111111111111
     </p>
-    <p class="text-highlight">
-      122312333333333333333333333333111111111111111111111111111111111111111111111111111
-    </p>
-    <p class="text-main">
-      122312333333333333333333333333111111111111111111111111111111111111111111111111111
-    </p>
-    <p class="text-white bg-highlight">
-      122312333333333333333333333333111111111111111111111111111111111111111111111111111
-    </p>
+    <p class="text-highlight">text-highlight</p>
+    <p class="text-main">test-main</p>
+    <p class="text-white bg-highlight">text-white bg-highlight</p>
+    <input type="text" />
   </div>
 </template>
 

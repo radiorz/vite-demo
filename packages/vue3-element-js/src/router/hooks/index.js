@@ -2,6 +2,7 @@ export function beforeEachHook(to, from, next) {
   next();
 }
 
-export function afterEach(to, from) {
+export function afterEachHook(to, from) {
   //do something
 }
+
