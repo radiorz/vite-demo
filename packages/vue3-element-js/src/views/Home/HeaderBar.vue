@@ -10,7 +10,9 @@
 <template>
   <FlexBar>
     <div class="w-full"></div>
+    <!-- 语言选择 -->
     <LocaleSwitch></LocaleSwitch>
+    <ToggleDark class="text-white"></ToggleDark>
     <div class="w-4"></div>
   </FlexBar>
 </template>

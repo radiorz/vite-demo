@@ -11,7 +11,10 @@ import { UseDark } from "@vueuse/components";
 
 <template>
   <UseDark v-slot="{ isDark, toggleDark }">
-    <el-button @click="toggleDark()">Is Dark: {{ isDark }}</el-button>
+    <el-button text @click="toggleDark()">
+      <i-ep-sunny v-show="isDark"></i-ep-sunny>
+      <i-ep-moon v-show="!isDark"></i-ep-moon>
+    </el-button>
   </UseDark>
 </template>
 
