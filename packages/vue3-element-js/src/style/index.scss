@@ -1,5 +1,8 @@
 html,
 body {
+  &.dark {
+    @apply bg-black text-white;
+  }
   margin: 0;
   padding: 0;
   height: 100%;
