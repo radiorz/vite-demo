@@ -6,6 +6,10 @@ export default {
     title: "标题",
     language: "语言",
   },
+  theme: {
+    notFound: '主题不存在',
+    empty: '主题为空'
+  },
   platform: { title: "平台标题" },
   app: {
     title: "应用标题",

@@ -5,11 +5,15 @@
 * [] 
 -->
 
-<script setup></script>
+<script setup>
+// 主题名称列表
+const themeList = ["light-theme", "dark-theme", "tiger-theme"];
+
+</script>
 
 <template>
-  <div class="app">
-    <router-view></router-view>
+  <div>
+
   </div>
 </template>
 
