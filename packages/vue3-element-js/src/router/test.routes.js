@@ -34,6 +34,11 @@ const testRoutes = [
         name: "Table",
         component: () => import("@/views/Test/TableTest.vue"),
       },
+      {
+        path: "theme",
+        name: "Theme",
+        component: () => import("@/views/Test/ThemeTest.vue"),
+      },
     ],
   },
 ];

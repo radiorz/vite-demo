@@ -6,16 +6,26 @@
 -->
 
 <script setup>
-import { UseDark } from "@vueuse/components";
+import * as dark from "@/composables/dark";
+let { isDark, toggleDark } = dark;
+// const isDark = 123;
+// const toogleDark = () => {};
 </script>
 
 <template>
-  <UseDark v-slot="{ isDark, toggleDark }">
-    <el-button text @click="toggleDark()">
-      <i-ep-sunny v-show="isDark"></i-ep-sunny>
-      <i-ep-moon v-show="!isDark"></i-ep-moon>
-    </el-button>
-  </UseDark>
+  <el-button
+    :style="{ '--el-fill-color-light': 'transparent' }"
+    type="plain"
+    text
+    @click="toggleDark()"
+  >
+    <i-ep-sunny class="dark:text-white text-black" v-show="isDark"></i-ep-sunny>
+    <i-ep-moon class="dark:text-white text-black" v-show="!isDark"></i-ep-moon>
+  </el-button>
 </template>
 
-<style></style>
+<style scoped lang="scss">
+.button {
+  @apply bg-transparent;
+}
+</style>
