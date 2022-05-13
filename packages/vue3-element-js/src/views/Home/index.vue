@@ -11,6 +11,7 @@ import routes from "@/router/routes.js";
 // import testRoutes from "@/router/test.route.js";
 import layouts from "@/components/Layout";
 import CommonLayout from "@/components/Layout/CommonLayout.vue";
+import HeaderBar from "./HeaderBar.vue";
 const { t } = useI18n();
 // const routes = [
 //   { name: "home", path: "/" },
@@ -27,12 +28,8 @@ const Layout = defineAsyncComponent(layouts["CommonLayout"]);
   <div class="home">
     <!-- 这个后期可以使用可变的layout -->
     <component :is="Layout">
-
       <template v-slot:header>
-        <!-- TODO  -->
-        <div>
-          <LocaleSwitch></LocaleSwitch>
-        </div>
+        <HeaderBar /> 
       </template>
       <template v-slot:aside>
         <ul>

@@ -1,8 +1,12 @@
+import common from "./common";
+
 export default {
+  ...common,
   default: {
     title: "标题",
+    language: "语言",
   },
-  platform: {title:"平台标题"},
+  platform: { title: "平台标题" },
   app: {
     title: "应用标题",
   },

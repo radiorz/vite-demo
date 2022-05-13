@@ -6,7 +6,10 @@ import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import { join, resolve } from "path";
 import "./config/index";
-
+import Icons from "unplugin-icons/vite";
+import IconsResolver from "unplugin-icons/resolver";
+// 插件检查
+// import Inspect from "vite-plugin-inspect";
 /**
  * https://vitejs.dev/config/
  * @type {import('vite').UserConfig}
@@ -34,18 +37,37 @@ export default () => {
       },
     },
     plugins: [
+      vue(),
       // 自动导入
       AutoImport({
         dts: "src/auto-imports.d.ts", // 记录
+        // 自动导入 Vue 相关函数，如：ref, reactive, toRef 等
         imports: ["vue"],
-        resolvers: [ElementPlusResolver()],
+        // 自动导入 Element Plus 相关函数，如：ElMessage, ElMessageBox... (带样式)
+        resolvers: [
+          ElementPlusResolver(),
+          // 自动导入图标组件
+          IconsResolver({
+            prefix: "Icon",
+          }),
+        ],
       }),
       // 自动导入组件
       Components({
         dts: "src/components.d.ts", // 记录
-        resolvers: [ElementPlusResolver()],
+        resolvers: [
+          // 自动注册图标组件
+          IconsResolver({
+            enabledCollections: ["ep"],
+          }),
+          // 自动导入 Element Plus 组件
+          ElementPlusResolver(), // 自动注册图标组件
+        ],
       }),
-      vue(),
+      Icons({
+        autoInstall: true,
+      }),
+      // Inspect(),
     ],
     resolve: {
       alias: {
@@ -54,6 +76,7 @@ export default () => {
       // 省略文件扩展名
       extensions: [".js", ".ts", ".jsx", ".tsx", ".json", ".vue"],
     },
+
     build,
     // electron 绝对路径将识别错误
     base: "./",

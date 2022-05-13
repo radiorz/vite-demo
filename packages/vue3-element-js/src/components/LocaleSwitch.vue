@@ -14,21 +14,37 @@ const changeLocale = (lang) => {
     $log.error(t(`${lang} is not available`));
     throw new Error(t("lang is not available"));
   }
-  locale.value = lang
+  locale.value = lang;
 };
 </script>
 
 <template>
   <div class="language flex justify-center">
-    {{ t(locale) }}
-
-    {{ availableLocales }}
     <!-- 图标 -->
     <!-- 下拉列表 -->
-    <div v-for="(theLocale, index) in availableLocales" :key="index">
-      <el-button @click="changeLocale(theLocale)"> {{ t(theLocale) }}</el-button>
-    </div>
+    <el-dropdown class="dropdown" @command="changeLocale">
+      <span class="text-white h-full">
+        {{ t("default.language") }}
+      </span>
+      <el-icon class="el-icon--right"><i-ep-arrow-down /></el-icon>
+      <template #dropdown>
+        <el-dropdown-menu>
+          <el-dropdown-item
+            v-for="(theLocale, index) in availableLocales"
+            :key="index"
+            :command="theLocale"
+          >
+            {{ t(`language.${theLocale}`) }}
+          </el-dropdown-item>
+        </el-dropdown-menu>
+      </template>
+    </el-dropdown>
   </div>
 </template>
 
-<style></style>
+<style lang="scss" scoped>
+.dropdown {
+  font-size: 1rem;
+  @apply text-white shrink-0;
+}
+</style>

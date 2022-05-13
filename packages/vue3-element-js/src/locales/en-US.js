@@ -1,6 +1,10 @@
+import common from "./common";
+
 export default {
+  ...common,
   default: {
     title: "title",
+    language: "language",
   },
   platform: { title: "platform" },
   app: {
