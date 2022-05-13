@@ -1,15 +1,15 @@
-import zh from "@/language/zh";
-import en from "@/language/en";
+import zhCN from "@/locales/zh-CN";
+import enUS from "@/locales/en-US";
 import { createI18n } from "vue-i18n";
 const i18n = createI18n({
   // switch composition api /options api
   legacy: false,
-  locale: "zh",
+  locale: "zh-CN",
   // ???
-  fallbackLocale: "zh",
+  fallbackLocale: "zh-CN",
   messages: {
-    zh,
-    en,
+    "zh-CN": zhCN,
+    "en-US": enUS,
   },
 });
 export default i18n;

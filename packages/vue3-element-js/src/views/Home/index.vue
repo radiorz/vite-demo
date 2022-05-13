@@ -30,8 +30,9 @@ const Layout = defineAsyncComponent(layouts["CommonLayout"]);
 
       <template v-slot:header>
         <!-- TODO  -->
-        <h1>{{ t("default.title") }}</h1>
-        <div class="w-80"></div>
+        <div>
+          <LocaleSwitch></LocaleSwitch>
+        </div>
       </template>
       <template v-slot:aside>
         <ul>

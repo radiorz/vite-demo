@@ -14,7 +14,7 @@ $log.info(123);
 </script>
 
 <template>
-  <div class="app">123123</div>
+  <div class="app">{{ $t("default.title") }}</div>
 </template>
 
 <style></style>
