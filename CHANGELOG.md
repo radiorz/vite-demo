@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.3](https://gitee.com/radiorz/lerna-demo/compare/v1.0.2...v1.0.3) (2022-05-14)
+
+
+### Features
+
+* **vue3-element-js:** 可以切换语言 ([14bc354](https://gitee.com/radiorz/lerna-demo/commits/14bc354f62d26b272bf9f2ad1df9b74b473cae42))
+* **vue3-element-js:** 切换语言按钮可用 ([f0ded11](https://gitee.com/radiorz/lerna-demo/commits/f0ded11753779e5802ce5c2294f2da1b2b93f0c3))
+* **vue3-element-js:** 设置了主题 可以切换主题 不过 还为和 element整合 ([c84d52b](https://gitee.com/radiorz/lerna-demo/commits/c84d52bfd1a3dcd1241ea92101affae258a4899a))
+* **vue3-element-js:** 深色模式初步成功 ([b0e29a7](https://gitee.com/radiorz/lerna-demo/commits/b0e29a7bab70a7434c235c6187147ffeddc952ba))
+* **vue3-element-js:** 主题切换粗粗可用 ([91bc2ba](https://gitee.com/radiorz/lerna-demo/commits/91bc2baf4d1dc6cc1a69ebeaa1ae113ec5b0448f))
+* **vue3-element-ui:** 成功设置 主题色 ([001c849](https://gitee.com/radiorz/lerna-demo/commits/001c8492c77ee6c07873891644dc7879a027668d))
+
+
+
+
+
 ## 1.0.2 (2022-05-12)
 
 
