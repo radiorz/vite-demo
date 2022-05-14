@@ -1,18 +1,24 @@
-
 html,
 body {
-  @apply text-main bg-base;
+  @apply bg-base text-main  selection:bg-muted selection:text-highlight;
   margin: 0;
   padding: 0;
   height: 100%;
 }
-
+a {
+  @apply text-highlight hover:text-highlight/50;
+  // FIXME 这里 被 text inherit 替换了
+}
+// FIXME 会和 element-ui 冲突
+.tw-input {
+  @apply rounded-md border-2 border-highlight bg-base caret-highlight focus:outline-none focus-visible:ring focus-visible:ring-highlight/50;
+}
 #app {
   height: 100%;
 }
 
 .flex-center {
-  @apply flex justify-center items-center;
+  @apply flex items-center justify-center;
 }
 .el-container {
   height: 100%;

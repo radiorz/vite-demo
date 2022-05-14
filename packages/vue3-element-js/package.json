@@ -15,6 +15,8 @@
     "nanoid": "^3.3.4",
     "nprogress": "^0.2.0",
     "pinia": "^2.0.14",
+    "prettier": "^2.6.2",
+    "prettier-plugin-tailwindcss": "^0.1.10",
     "sass": "^1.51.0",
     "unplugin-icons": "^0.14.3",
     "vite-plugin-inspect": "^0.5.0",

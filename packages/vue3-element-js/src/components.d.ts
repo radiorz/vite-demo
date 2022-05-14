@@ -16,6 +16,7 @@ declare module '@vue/runtime-core' {
     ElDropdownMenu: typeof import('element-plus/es')['ElDropdownMenu']
     ElHeader: typeof import('element-plus/es')['ElHeader']
     ElIcon: typeof import('element-plus/es')['ElIcon']
+    ElInput: typeof import('element-plus/es')['ElInput']
     ElMain: typeof import('element-plus/es')['ElMain']
     EmptyLayout: typeof import('./components/Layout/EmptyLayout.vue')['default']
     FlexBar: typeof import('./components/FlexBar.vue')['default']
