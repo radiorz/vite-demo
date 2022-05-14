@@ -1,6 +1,6 @@
 {
   "name": "lerna-demo",
-  "version": "1.0.0",
+  "version": "independent",
   "description": "",
   "main": "index.js",
   "private": true,
@@ -34,5 +34,8 @@
   "license": "ISC",
   "devDependencies": {
     "lerna": "^4.0.0"
+  },
+  "dependencies": {
+    "scripy": "^0.3.0"
   }
 }
