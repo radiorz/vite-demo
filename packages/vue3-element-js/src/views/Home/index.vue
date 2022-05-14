@@ -20,7 +20,7 @@ const { t } = useI18n();
 const testRoutes = [{ name: "test", path: "/test" }];
 $log.debug(`routes`, routes);
 $log.debug(`routes`, testRoutes);
-const links = [...routes, ...testRoutes];
+const linkMenus = [...routes, ...testRoutes];
 const Layout = defineAsyncComponent(layouts["CommonLayout"]);
 </script>
 
@@ -29,16 +29,10 @@ const Layout = defineAsyncComponent(layouts["CommonLayout"]);
     <!-- 这个后期可以使用可变的layout -->
     <component :is="Layout">
       <template v-slot:header>
-        <HeaderBar /> 
+        <HeaderBar />
       </template>
       <template v-slot:aside>
-        <ul>
-          <li v-for="(link, index) in links" :key="index">
-            <router-link :to="link.path">{{
-              t(`links.${link.name}`)
-            }}</router-link>
-          </li>
-        </ul>
+        <MainMenu :menus="linkMenus"></MainMenu>
       </template>
       <router-view>{{ t("views.main") }}</router-view>
     </component>

@@ -5,6 +5,7 @@ export default {
   default: {
     title: "title",
     language: "language",
+    theme: "",
   },
   platform: { title: "platform" },
   app: {

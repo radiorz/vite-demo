@@ -4,6 +4,9 @@ import Components from "unplugin-vue-components/vite";
 import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
+
+import vueJsx from "@vitejs/plugin-vue-jsx";
+
 import { join, resolve } from "path";
 import "./config/index";
 import Icons from "unplugin-icons/vite";
@@ -38,6 +41,9 @@ export default () => {
     },
     plugins: [
       vue(),
+      vueJsx({
+        // options are passed on to @vue/babel-plugin-jsx
+      }),
       // 自动导入
       AutoImport({
         // 记录
