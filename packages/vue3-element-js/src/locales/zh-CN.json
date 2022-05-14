@@ -1,0 +1,28 @@
+{
+  "app": {
+    "title": "应用标题"
+  },
+  "default": {
+    "language": "语言",
+    "theme": "主题",
+    "title": "标题"
+  },
+  "links": {
+    "About": "关于",
+    "Home": "首页",
+    "Test": "测试页"
+  },
+  "platform": {
+    "title": "平台标题"
+  },
+  "theme": {
+    "dark": "暗色主题",
+    "empty": "主题为空",
+    "light": "亮色主题",
+    "notFound": "主题不存在",
+    "tiger-theme": "虎年主题"
+  },
+  "views": {
+    "main": "主模块页面"
+  }
+}
