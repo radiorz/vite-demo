@@ -3,6 +3,7 @@ import common from "./common";
 export default {
   ...common,
   default: {
+    theme: "主题",
     title: "标题",
     language: "语言",
   },
@@ -11,7 +12,7 @@ export default {
     empty: "主题为空",
     light: "亮色主题",
     dark: "暗色主题",
-    'tiger-theme': "虎年主题",
+    "tiger-theme": "虎年主题",
   },
   platform: { title: "平台标题" },
   app: {

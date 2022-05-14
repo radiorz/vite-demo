@@ -13,10 +13,10 @@
   - 卡片列表
 - 表单
 - 表单设计器
+- 图标
 - 功能
   - 水印
   - 打印
-  - 图标
   - 拖拽
 - 组件
 
@@ -37,8 +37,24 @@
   - 结果页面 成功 失败
   - 403 404 500
   - 外部页面
-  - *引导页
+  - \*引导页
 
-- 路由
+- 路由菜单
   - 切换页面结束请求等
   - nprogress
+- 权限
+- httpapi
+
+## 图标
+
+- iconify
+- heroicons
+
+## 主题定制
+
+@zougt/vite-plugin-theme-preprocessor/dist/browser-utils
+
+## 国际化
+i18n ally 智能提示
+@intlify/vite-plugin-vue-i18n
+
