@@ -4,6 +4,7 @@ import testRoutes from "./test.routes.js";
 import * as hook from "./hooks/index.js";
 import createProgress from "./hooks/nprogress";
 $log.debug("routes", [...routes, ...testRoutes]);
+$log.debug(window)
 const router = createRouter({
   history: createWebHashHistory(),
   routes: [...routes, ...testRoutes],

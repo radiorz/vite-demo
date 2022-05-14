@@ -57,4 +57,5 @@
 ## 国际化
 i18n ally 智能提示
 @intlify/vite-plugin-vue-i18n
+@intlify/vite-plugin-vue-i18n
 

@@ -43,7 +43,7 @@ let value = ref("");
     <input type="button" />
     <el-button>我是个 element 按钮啊</el-button>
     <button>我是个按钮啊</button>
-    <h1>with $t('default.theme')
+    <h1>with t('default.theme')
     </h1>
   </div>
 </template>
