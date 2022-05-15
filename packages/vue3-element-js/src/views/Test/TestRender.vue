@@ -6,7 +6,15 @@
 -->
 
 <script setup>
-import jsNode from "./jsxrender";
+import jsxNode from "./jsxrender.jsx";
+$log.info(jsxNode);
+
+// const jsxNode2 = defineComponent({
+//   name: "jsxNode2",
+//   render() {
+//     return <div>123</div>;
+//   },
+// });
 const render = () => {
   return h("div", [], "h render");
 };
@@ -15,6 +23,7 @@ const render = () => {
   <div>
     <render />
     <jsxNode />
+    <!-- <jsxNode2 /> -->
   </div>
 </template>
 

@@ -1,5 +1,5 @@
 {
-  "i18n-ally.localesPaths": ["packages/vue3-element-js/src/locales"],
+  "i18n-ally.localesPaths": ["packages/vue3-element-js/locales"],
   "i18n-ally.keystyle": "nested",
   "i18n-ally.sortKeys": true,
   "i18n-ally.namespace": true,

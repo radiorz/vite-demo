@@ -1,11 +1,15 @@
 // vite.config.js
 import AutoImport from "unplugin-auto-import/vite";
 import Components from "unplugin-vue-components/vite";
-import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
+import {
+  ElementPlusResolver,
+  VueUseComponentsResolver,
+} from "unplugin-vue-components/resolvers";
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
-
+import VueI18n from "@intlify/vite-plugin-vue-i18n";
 import vueJsx from "@vitejs/plugin-vue-jsx";
+import legacy from "@vitejs/plugin-legacy";
 
 import { join, resolve } from "path";
 import "./config/index";
@@ -40,9 +44,12 @@ export default () => {
       },
     },
     plugins: [
-      vue(),
-      vueJsx({
-        // options are passed on to @vue/babel-plugin-jsx
+      vue({
+        // include: [/\.vue$/, /\.md$/],
+      }),
+      vueJsx(),
+      legacy({
+        targets: ["defaults", "not IE 11"],
       }),
       // 自动导入
       AutoImport({
@@ -69,16 +76,22 @@ export default () => {
           }),
           // 自动导入 Element Plus 组件
           ElementPlusResolver(), // 自动注册图标组件
+          VueUseComponentsResolver(), // 自动注册 vue-use 组件
         ],
       }),
       Icons({
+        compiler: "vue3",
         autoInstall: true,
+      }),
+      VueI18n({
+        include: [resolve(__dirname, "../locales/**")],
       }),
       // Inspect(),
     ],
     resolve: {
       alias: {
         "@": resolve("src"),
+        "@locales": resolve("locales"),
       },
       // 省略文件扩展名
       extensions: [".js", ".ts", ".jsx", ".tsx", ".json", ".vue"],

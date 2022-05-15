@@ -3,6 +3,6 @@ export default defineComponent({
   name: "js-node",
   setup() {
     // return () => h("div", [], "jsx render");
-    return () => <div> jsxNode </div>;
+    return () => (<div> this is jsxNode </div>);
   },
 });
