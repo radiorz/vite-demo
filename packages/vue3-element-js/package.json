@@ -21,6 +21,7 @@
     "prettier-plugin-tailwindcss": "^0.1.10",
     "sass": "^1.51.0",
     "unplugin-icons": "^0.14.3",
+    "v-contextmenu": "^2.9.0",
     "vite-plugin-inspect": "^0.5.0",
     "vue": "^3.2.33",
     "vue-i18n": "^9.1.10",

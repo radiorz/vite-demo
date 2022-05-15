@@ -44,6 +44,11 @@ const testRoutes = [
         name: "Render",
         component: () => import("@/views/Test/TestRender.vue"),
       },
+      {
+        path: "watermark",
+        name: "WaterMarker",
+        component: () => import("@/views/Test/TestWaterMark.vue"),
+      },
     ],
   },
 ];
