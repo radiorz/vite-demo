@@ -6,9 +6,9 @@
 -->
 
 <script setup>
-import { useI18n } from "vue-i18n";
+// import { useI18n } from "vue-i18n";
 
-const { t } = useI18n();
+// const { t } = useI18n();
 </script>
 
 <template>
@@ -16,7 +16,7 @@ const { t } = useI18n();
     <el-container>
       <el-header class="header">
         <div class="brand flex-center">
-          <slot name="brand">{{ t("platform.title") }}</slot>
+          <slot name="brand">{{ $t("platform.title") }}</slot>
         </div>
         <!-- FIXME 此处有bug -->
         <div class="flex-center w-full">

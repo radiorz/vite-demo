@@ -6,12 +6,15 @@
 -->
 
 <script setup>
-
+const data1 = ref("111");
 </script>
 
 <template>
-  <div class='app'>
-    <router-view></router-view>
+  <div>
+    <h1>元素</h1>
+    {{ typeof isDev}}
+    {{ window.isDev ? data1 : "" }}
+    <!-- <number-input v-model="data1"></number-input> -->
   </div>
 </template>
 

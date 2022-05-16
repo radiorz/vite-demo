@@ -19,8 +19,9 @@ let { isDark, toggleDark } = dark;
     text
     @click="toggleDark()"
   >
-    <i-ep-sunny class="dark:text-white text-black" v-show="isDark"></i-ep-sunny>
-    <i-ep-moon class="dark:text-white text-black" v-show="!isDark"></i-ep-moon>
+    <!-- FIXME 这货颜色有问题 -->
+    <i-ep-sunny v-show="isDark"></i-ep-sunny>
+    <i-ep-moon v-show="!isDark"></i-ep-moon>
   </el-button>
 </template>
 

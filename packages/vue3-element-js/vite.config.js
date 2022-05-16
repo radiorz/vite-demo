@@ -84,7 +84,7 @@ export default () => {
         autoInstall: true,
       }),
       VueI18n({
-        include: [resolve(__dirname, "../locales/**")],
+        include: [resolve(__dirname, "locales/**")],
       }),
       // Inspect(),
     ],
