@@ -12,9 +12,9 @@ const data1 = ref("111");
 <template>
   <div>
     <h1>元素</h1>
-    {{ typeof isDev}}
-    {{ window.isDev ? data1 : "" }}
-    <!-- <number-input v-model="data1"></number-input> -->
+    {{ typeof isDev }}
+    {{ data1 }}
+    <number-input v-model="data1"></number-input>
   </div>
 </template>
 

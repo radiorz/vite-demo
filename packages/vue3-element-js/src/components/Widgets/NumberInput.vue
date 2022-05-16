@@ -11,6 +11,11 @@ import { ElInput } from "element-plus/es";
 export default defineComponent({
   extends: ElInput,
   inheritAttrs: false,
+
+  setup(props, { attrs }) {
+    console.log(`props`, props);
+    console.log(`attrs`, attrs);
+  },
   mounted() {
     console.log(`$listeners`, this.$props);
     console.log(`$listeners`, this.$attrs);
@@ -20,7 +25,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <el-input  v-bind="{ ...$props, ...$attrs }" type="number" />
+  <el-input v-bind="{ ...$props, ...$attrs }" type="number" />
 </template>
 
 <style lang="scss" scoped></style>
