@@ -11,7 +11,6 @@ import VueI18n from "@intlify/vite-plugin-vue-i18n";
 import vueJsx from "@vitejs/plugin-vue-jsx";
 import legacy from "@vitejs/plugin-legacy";
 
-
 import { join, resolve } from "path";
 import "./config/index";
 import Icons from "unplugin-icons/vite";

@@ -8,21 +8,14 @@
     "ncu": "ncu -u"
   },
   "dependencies": {
-    "@element-plus/icons-vue": "^1.1.4",
-    "@intlify/vite-plugin-vue-i18n": "^3.4.0",
-    "@vitejs/plugin-legacy": "^1.8.2",
     "@vueuse/components": "^8.4.2",
     "@vueuse/core": "^8.4.2",
     "element-plus": "^2.2.0",
     "nanoid": "^3.3.4",
     "nprogress": "^0.2.0",
     "pinia": "^2.0.14",
-    "prettier": "^2.6.2",
-    "prettier-plugin-tailwindcss": "^0.1.10",
     "sass": "^1.51.0",
-    "unplugin-icons": "^0.14.3",
     "v-contextmenu": "^2.9.0",
-    "vite-plugin-inspect": "^0.5.0",
     "vue": "^3.2.33",
     "vue-i18n": "^9.1.10",
     "vue-router": "^4.0.15",
@@ -32,7 +25,9 @@
   "license": "ISC",
   "devDependencies": {
     "@iconify-json/ep": "^1.1.3",
+    "@iconify/json": "^2.1.44",
     "@iconify/vue": "^3.2.1",
+    "@intlify/vite-plugin-vue-i18n": "^3.4.0",
     "@types/js-cookie": "^3.0.1",
     "@types/node": "14.14.14",
     "@types/nprogress": "^0.2.0",
@@ -44,9 +39,13 @@
     "eslint": "^8.15.0",
     "eslint-plugin-vue": "^8.7.1",
     "postcss": "^8.4.13",
+    "prettier": "^2.6.2",
+    "prettier-plugin-tailwindcss": "^0.1.10",
     "tailwindcss": "^3.0.24",
     "unplugin-auto-import": "^0.7.1",
+    "unplugin-icons": "^0.14.3",
     "unplugin-vue-components": "^0.19.5",
-    "vite": "^2.9.9"
+    "vite": "^2.9.9",
+    "vite-plugin-inspect": "^0.5.0"
   }
 }
