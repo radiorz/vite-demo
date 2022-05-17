@@ -5,11 +5,14 @@
 * [] 
 -->
 
-<script setup></script>
+<script setup>
+import { Icon } from "@iconify/vue";
+</script>
 
 <template>
   <div>
     <IEpArrowDown />
+    <Icon icon="mdi-light:home" />
   </div>
 </template>
 

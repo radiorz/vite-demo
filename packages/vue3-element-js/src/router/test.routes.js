@@ -37,7 +37,7 @@ const testRoutes = [
       {
         path: "theme",
         name: "Theme",
-        component: () => import("@/views/Test/ThemeTest.vue"),
+        component: () => import("@/views/Test/Theme/index.vue"),
       },
       {
         path: "render",
@@ -48,6 +48,11 @@ const testRoutes = [
         path: "watermark",
         name: "WaterMarker",
         component: () => import("@/views/Test/TestWaterMark.vue"),
+      },
+      {
+        path: "marquee",
+        name: "Marquee",
+        component: () => import("@/views/Test/components/Marquee.vue"),
       },
     ],
   },
