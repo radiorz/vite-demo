@@ -5,12 +5,13 @@
 * [] 
 -->
 
-<script setup></script>
+<script setup>
+$log.debug("this is empty layout");
+</script>
 
 <template>
   <div>
     <slot>
-      123
       <router-view />
     </slot>
   </div>

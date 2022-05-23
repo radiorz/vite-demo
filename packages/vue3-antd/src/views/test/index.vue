@@ -21,7 +21,7 @@ export default defineComponent({
   // computed:{},
   // watch:{},
   created() {
-    console.log(`this.$log`,this.$log)
+    console.log(`this.$log`, this.$log);
     this.$log.info("i am test");
   },
   // methods:{}
@@ -29,8 +29,9 @@ export default defineComponent({
 </script>
 
 <template>
-  <div class="" />
-  <span>123</span>
+  <CommonLayout>
+    <router-view />
+  </CommonLayout>
 </template>
 
 <style lang="scss" scoped></style>
