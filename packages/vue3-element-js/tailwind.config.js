@@ -21,6 +21,7 @@ function withOpacityValue(variable) {
 const highlight = withOpacityValue("--color-highlight");
 const config = {
   content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
+  mode: "jit",
   darkMode: "media", // or 'media' or 'class'
   theme: {
     extend: {
@@ -78,5 +79,5 @@ const config = {
   },
 };
 
-console.log(`config`, config);
+// console.log(`config`, config);
 module.exports = config;

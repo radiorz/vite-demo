@@ -7,5 +7,11 @@
   "i18n-ally.sourceLanguage": "zh-CN",
   "i18n-ally.displayLanguage": "zh-CN",
   "i18n-ally.translate.engines": ["google-cn", "google", "deepl"],
-  "i18n-ally.enabledFrameworks": ["vue"]
+  "i18n-ally.enabledFrameworks": [
+    "vue"
+  ],
+  "cSpell.words": [
+    "Pinia",
+    "tailwindcss"
+  ]
 }

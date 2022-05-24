@@ -16,7 +16,8 @@ $log.debug("testRoutes", testRoutes);
     <template v-slot:header> this is test</template>
     <template v-slot:aside>
       <!-- 侧边栏 -->
-      {{ testRoutes.children.map((item) => item.name) }}
+      <RouteMenu :father="testRoutes" :menus="testRoutes.children"></RouteMenu>
+      <!-- {{ testRoutes.children.map((item) => item.name) }} -->
     </template>
     <router-view />
   </CommonLayout>

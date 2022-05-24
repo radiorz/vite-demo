@@ -1,4 +1,5 @@
 // vite.config.js
+import "./config/index";
 import AutoImport from "unplugin-auto-import/vite";
 import Components from "unplugin-vue-components/vite";
 import {
@@ -12,7 +13,6 @@ import vueJsx from "@vitejs/plugin-vue-jsx";
 import legacy from "@vitejs/plugin-legacy";
 
 import { join, resolve } from "path";
-import "./config/index";
 import Icons from "unplugin-icons/vite";
 import IconsResolver from "unplugin-icons/resolver";
 // 插件检查

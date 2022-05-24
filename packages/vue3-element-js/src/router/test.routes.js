@@ -1,4 +1,6 @@
-export default {
+import { namedWithTest, makeRoute } from "@/utils/route";
+
+const routes = {
   path: "/test",
   name: "Test",
   // redirect: "/test/home",
@@ -7,8 +9,18 @@ export default {
     {
       path: "pinia",
       name: "Pinia",
-      component: () => import("@/testViews/PiniaTest.vue"),
+      component: () => import("@/components/Layout/EmptyLayout.vue"),
+      children: [
+        {
+          path: "todo",
+          name: "TODO",
+          component: () => import("@/testViews/pinia/Todo.vue"),
+        },
+      ],
     },
+    makeRoute("tailwind", namedWithTest("Tailwind"), () =>
+      import("@/testViews/Tailwind/index.vue")
+    ),
     {
       path: "i18n",
       name: "I18n",
@@ -56,8 +68,15 @@ export default {
     },
     {
       path: "lazyImg",
-      name: "lazyImg",
+      name: "LazyImg",
       component: () => import("@/testViews/directives/lazyImg.vue"),
     },
   ],
+};
+export default {
+  ...routes,
+  children: routes.children.map((item) => ({
+    ...item,
+    name: namedWithTest(item.name),
+  })),
 };
