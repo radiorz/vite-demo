@@ -1,5 +1,14 @@
+import logger from "@/plugins/logger";
 import { namedWithTest, makeRoute } from "@/utils/route";
 
+const nestRoute = { path: "nest", name: "nest" };
+let currentRoute = {};
+for (let i = 0; i < 2; i++) {
+  currentRoute.children = [nestRoute];
+  currentRoute = currentRoute.children[0];
+}
+currentRoute.component = () => import("@/testViews/Nest/index.vue");
+logger.debug("nestRoute", nestRoute);
 const routes = {
   path: "/test",
   name: "Test",
@@ -18,6 +27,7 @@ const routes = {
         },
       ],
     },
+
     makeRoute("tailwind", namedWithTest("Tailwind"), () =>
       import("@/testViews/Tailwind/index.vue")
     ),
@@ -65,6 +75,11 @@ const routes = {
       path: "marquee",
       name: "Marquee",
       component: () => import("@/testViews/components/Marquee.vue"),
+    },
+    {
+      path: "mymarquee",
+      name: "MyMarquee",
+      component: () => import("@/testViews/components/TestMyMarquee.vue"),
     },
     {
       path: "lazyImg",
