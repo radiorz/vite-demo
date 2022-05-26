@@ -15,6 +15,11 @@
   "platform": {
     "title": "平台标题"
   },
+  "form": {
+    "login": "登录",
+    "username": "用户名",
+    "password": "密码"
+  },
   "theme": {
     "dark": "暗色主题",
     "empty": "主题为空",

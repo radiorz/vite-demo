@@ -23,7 +23,8 @@
     "vej:build": "yarn workspace vue3-element-js build",
     "vat:build": "yarn workspace vue3-antd build",
     "vvt:build": "yarn workspace vue3-vuetify build",
-    "vet:build": "yarn workspace vue3-element build"
+    "vet:build": "yarn workspace vue3-element build",
+    "vej:ncu": "yarn workspace vue3-element-js ncu"
   },
   "repository": {
     "type": "git",

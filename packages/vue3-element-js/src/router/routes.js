@@ -9,5 +9,11 @@ const routes = [
     name: "About",
     component: () => import("@/views/About/index.vue"),
   },
+  
+  {
+    path: "/login",
+    name: "Login",
+    component: () => import("@/views/Login/index.vue"),
+  },
 ];
 export default routes;
