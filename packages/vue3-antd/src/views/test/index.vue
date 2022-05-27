@@ -21,7 +21,6 @@ export default defineComponent({
   // computed:{},
   // watch:{},
   created() {
-    console.log(`this.$log`, this.$log);
     this.$log.info("i am test");
   },
   // methods:{}

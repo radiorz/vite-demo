@@ -1,12 +1,12 @@
 // vite.config.js
 import "./config/index";
+import { defineConfig } from "vite";
 import AutoImport from "unplugin-auto-import/vite";
 import Components from "unplugin-vue-components/vite";
 import {
   ElementPlusResolver,
   VueUseComponentsResolver,
 } from "unplugin-vue-components/resolvers";
-import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import VueI18n from "@intlify/vite-plugin-vue-i18n";
 import vueJsx from "@vitejs/plugin-vue-jsx";
@@ -56,7 +56,7 @@ export default () => {
         // 记录
         dts: "src/auto-imports.d.ts",
         // 自动导入 Vue 相关函数，如：ref, reactive, toRef 等
-        imports: ["vue", "vue-router", "vue-i18n", "@vueuse/core", ],
+        imports: ["vue", "vue-router", "vue-i18n", "@vueuse/core"],
         // 自动导入 Element Plus 相关函数，如：ElMessage, ElMessageBox... (带样式)
         resolvers: [
           ElementPlusResolver(),

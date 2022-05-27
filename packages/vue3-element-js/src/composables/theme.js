@@ -11,11 +11,11 @@ export const themeList = ["light", "dark", "tiger-theme"];
  */
 export function setTheme(theme) {
   if (!theme) {
-    $log.warn($i18n.t("theme.empty"));
+    $log.warn(() => $i18n.t("theme.empty"));
     return;
   }
   if (!themeList.includes(theme)) {
-    $log.warn($i18n.t("theme.notFound"));
+    $log.warn(() => $i18n.t("theme.notFound"));
     return;
   }
   // const body = document.body;

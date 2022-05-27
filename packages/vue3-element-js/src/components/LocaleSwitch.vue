@@ -11,7 +11,7 @@ const { locale, t, availableLocales } = useI18n();
 
 const changeLocale = (lang) => {
   if (!availableLocales.includes(lang)) {
-    $log.error(t(`${lang} is not available`));
+    $log.error(() => t(`${lang} is not available`));
     throw new Error(t("lang is not available"));
   }
   locale.value = lang;
@@ -23,7 +23,7 @@ const changeLocale = (lang) => {
     <!-- 图标 -->
     <!-- 下拉列表 -->
     <el-dropdown class="dropdown" @command="changeLocale">
-      <span class="text-white h-full">
+      <span class="h-full text-white">
         {{ t("default.language") }}
       </span>
       <el-icon class="el-icon--right"><i-ep-arrow-down /></el-icon>
@@ -45,6 +45,6 @@ const changeLocale = (lang) => {
 <style lang="scss" scoped>
 .dropdown {
   font-size: 1rem;
-  @apply text-white shrink-0;
+  @apply shrink-0 text-white;
 }
 </style>
