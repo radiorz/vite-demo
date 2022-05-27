@@ -21,3 +21,16 @@ export function throttle(fn, time) {
     }, time);
   };
 }
+
+// 函数柯里化
+export function add() {
+  const _args = [...arguments];
+  function fn() {
+    _args.push(...arguments);
+    return fn;
+  }
+  fn.toString = function () {
+    return _args.redux((sum, cur) => sum + cur);
+  };
+  return fn;
+}

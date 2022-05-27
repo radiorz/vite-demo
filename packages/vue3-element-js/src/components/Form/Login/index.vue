@@ -12,7 +12,7 @@ export default {
 </script>
 <script setup>
 const { t } = useI18n();
-// import VueForm from "@lljj/vue3-form-element";
+import VueForm from "@lljj/vue3-form-element";
 
 const formData = reactive({
   username: "",

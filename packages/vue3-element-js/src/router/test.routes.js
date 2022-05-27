@@ -21,6 +21,11 @@ const routes = {
       component: () => import("@/components/Layout/EmptyLayout.vue"),
       children: [
         {
+          path: "counter",
+          name: "Counter",
+          component: () => import("@/testViews/pinia/Counter.vue"),
+        },
+        {
           path: "todo",
           name: "TODO",
           component: () => import("@/testViews/pinia/Todo.vue"),
