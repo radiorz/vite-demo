@@ -1,5 +1,5 @@
 import env from "@/config/env";
-import logger from "./logger";
+import { logger } from "./logger";
 import i18n from "./i18n";
 Object.entries(env).forEach(([key, value]) => {
   window[key] = value;

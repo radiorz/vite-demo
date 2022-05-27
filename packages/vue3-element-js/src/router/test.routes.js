@@ -1,4 +1,4 @@
-import logger from "@/plugins/logger";
+import { logger } from "@/plugins/logger";
 import { namedWithTest, makeRoute } from "@/utils/route";
 
 const nestRoute = { path: "nest", name: "nest" };

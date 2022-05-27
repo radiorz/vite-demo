@@ -29,26 +29,39 @@ function getLogger(level) {
 
 /**
  * @description 前缀装饰器
- * @param {*} prefixs 耆那最
+ * @param {*} prefixs 前缀
  * @return {*}
  */
 function setPrefix(prefixs = []) {
   return (logger = getLogger()) => {
     Object.keys(LOG_LEVELS).forEach((type) => {
       const out = logger[type.toLowerCase()] || function () {};
-      if (out) {
+      const lazyOut = makeLazy(out);
+      if (lazyOut) {
         // 覆写logger方法
         logger[type.toLowerCase()] = (...args) => {
-          return out.call(logger, `[${type}]`, ...prefixs, ...args);
+          return lazyOut.call(logger, `[${type}]`, ...prefixs, ...args);
         };
       }
     });
     return logger;
   };
 }
+// 可使用函数
+const makeLazy = (func) => {
+  return (...args) => {
+    const lastArg = args[args.length - 1];
+    if (typeof lastArg === "function") {
+      args.pop();
+      func(...args, lastArg());
+    } else {
+      func(...args);
+    }
+  };
+};
 
 level: "INFO";
-export function useLogger(
+export default function useLogger(
   name = "loggerName",
   { prefixs = [], level = isDev ? LOG_LEVELS.DEBUG : LOG_LEVELS.INFO } = {}
 ) {
@@ -62,5 +75,5 @@ export function useLogger(
 
   return logger;
 }
-
-export default useLogger("voerka");
+// 定制前缀
+export const logger = useLogger("tikkhun");
