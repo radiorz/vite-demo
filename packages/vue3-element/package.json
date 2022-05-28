@@ -12,6 +12,7 @@
     "@lljj/vue3-form-element": "^1.13.0",
     "element-plus": "^2.2.0",
     "pinia": "^2.0.14",
+    "theme-change": "^2.0.2",
     "vue": "^3.2.25",
     "vue-router": "^4.0.15"
   },

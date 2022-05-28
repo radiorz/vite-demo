@@ -5,11 +5,15 @@
 * [] 
 -->
 
-<script setup></script>
+<script setup>
+// import ThemeChange from "@/components/ThemeChange/index.vue";
+</script>
 
 <template>
   <FlexBar>
     <div class="w-full"></div>
+    <!-- 主题选择 -->
+//    <ThemeChange></ThemeChange>
     <!-- 语言选择 -->
     <LocaleSwitch></LocaleSwitch>
     <ToggleDark class="text-white"></ToggleDark>

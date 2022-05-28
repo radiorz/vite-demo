@@ -50,11 +50,11 @@ export default {
 <script setup></script>
 
 <template>
-  <el-form>
+  <!-- <el-form>
     <el-form-item>
       <el-input />
     </el-form-item>
-  </el-form>
+  </el-form> -->
   <VueForm
     v-model="formData"
     :schema="schema"

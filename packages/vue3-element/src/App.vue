@@ -1,12 +1,11 @@
 <script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HelloWorld from "@/components/HelloWorld.vue";
-import FormTest from "@/components/FormTest.vue";
+// import FormTest from "@/components/FormTest.vue";
+import ThemeChange from "@/components/ThemeChange/index.vue";
 </script>
 
 <template>
-  <FormTest />
+  <!-- <FormTest /> -->
+  <ThemeChange />
 </template>
 
 <style>
