@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.5](https://gitee.com/radiorz/vue3-admin-ts/compare/v1.0.4...v1.0.5) (2022-05-31)
+
+
+### Bug Fixes
+
+* **vue3-element-js:** 提交一个 横向marquee的实现 ([6ee9bc6](https://gitee.com/radiorz/vue3-admin-ts/commits/6ee9bc605cf1d3fc365753a3b4609b669071e26e))
+* **vue3-element-js:** iconify/vue 与 unplugin 冲突 删除后重新安装即可 ([7515951](https://gitee.com/radiorz/vue3-admin-ts/commits/751595145baee8de933fe25e35b1601a0a3a5961))
+* **vue3-element:** 全局导入elementplus 则没问题可以获取到 组件了 ([6d9d7d7](https://gitee.com/radiorz/vue3-admin-ts/commits/6d9d7d7dca1a01def1ef2753ba7da60e4903cc26))
+
+
+### Features
+
+* 简单的 图片懒加载 from https://www.bilibili.com/video/BV1yu41167u3 ([da9a808](https://gitee.com/radiorz/vue3-admin-ts/commits/da9a80866c3b599aa524670791289b8cce38a5dc))
+* **vue-element-js:** 采用 自动生成路由的方式进行test路由配置) ([349a1ee](https://gitee.com/radiorz/vue3-admin-ts/commits/349a1ee3dced0de4abec7e9b336485441bb1fdc1))
+* **vue-element-js:** 添加routeguard ([58f59a0](https://gitee.com/radiorz/vue3-admin-ts/commits/58f59a0c29de067726a5ff0d1d72cb2ce4bd732c))
+* **vue3-element-js:** 菜单修改 tailwind 尝试不行... ([8da3bab](https://gitee.com/radiorz/vue3-admin-ts/commits/8da3babf030fd092856a8cb135fa853a542d3a92))
+* **vue3-element-js:** 抄袭了 vue-pure-admin 的无限滚动 略显复杂 ([483a22f](https://gitee.com/radiorz/vue3-admin-ts/commits/483a22f1bde0942f9dd4e2b4dd99e06eaf3bca7e))
+* **vue3-element-js:** 设置了嵌套路由 ([2f307d0](https://gitee.com/radiorz/vue3-admin-ts/commits/2f307d0ef3ae5da220dc1aa8b7e469ea887c0fea))
+* **vue3-element-js:** 使用 jsconfig.json 让 @可以切换到目的文件 ([d0f2df5](https://gitee.com/radiorz/vue3-admin-ts/commits/d0f2df5224c5abb9ffefc3a69ec772ca2ea930eb))
+* **vue3-element-js:** 试图组织css 代码 ([74a096c](https://gitee.com/radiorz/vue3-admin-ts/commits/74a096cb34eea1648e65167bbe59a0bcbe0f8ec8))
+* **vue3-element-js:** 提出locales 文件 ([5ff3518](https://gitee.com/radiorz/vue3-admin-ts/commits/5ff35186f4429596609270bd3458eb472b73b52b))
+* **vue3-elment-js:** 设置水印 ([ef29047](https://gitee.com/radiorz/vue3-admin-ts/commits/ef2904755ed9986dbdc8b3d5b853ce088809e118))
+
+
+
+
+
 ## [1.0.4](https://gitee.com/radiorz/vue3-admin-ts/compare/v1.0.3...v1.0.4) (2022-05-14)
 
 
