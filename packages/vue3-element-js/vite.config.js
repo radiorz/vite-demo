@@ -1,5 +1,7 @@
 // vite.config.js
 import "./config/index";
+import vitepwaConfig from "./config/vitepwa";
+import vitePagesConfig from "./config/vitePages";
 import { defineConfig } from "vite";
 import AutoImport from "unplugin-auto-import/vite";
 import Components from "unplugin-vue-components/vite";
@@ -11,7 +13,9 @@ import vue from "@vitejs/plugin-vue";
 import VueI18n from "@intlify/vite-plugin-vue-i18n";
 import vueJsx from "@vitejs/plugin-vue-jsx";
 import legacy from "@vitejs/plugin-legacy";
-
+// 文件路由
+import Pages from "vite-plugin-pages";
+import { VitePWA } from "vite-plugin-pwa";
 import { join, resolve } from "path";
 import Icons from "unplugin-icons/vite";
 import IconsResolver from "unplugin-icons/resolver";
@@ -45,9 +49,11 @@ export default () => {
     },
     plugins: [
       vue({
-        // include: [/\.vue$/, /\.md$/],
+        include: [/\.vue$/, /\.md$/],
       }),
       vueJsx(),
+      Pages(vitePagesConfig),
+      VitePWA(vitepwaConfig),
       legacy({
         targets: ["defaults", "not IE 11"],
       }),
@@ -56,7 +62,12 @@ export default () => {
         // 记录
         dts: "src/auto-imports.d.ts",
         // 自动导入 Vue 相关函数，如：ref, reactive, toRef 等
-        imports: ["vue", "vue-router", "vue-i18n", "@vueuse/core"],
+        imports: [
+          "vue",
+          "vue-router",
+          "vue-i18n",
+          "@vueuse/core",
+        ],
         // 自动导入 Element Plus 相关函数，如：ElMessage, ElMessageBox... (带样式)
         resolvers: [
           ElementPlusResolver(),

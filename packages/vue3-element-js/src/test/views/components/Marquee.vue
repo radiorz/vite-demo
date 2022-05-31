@@ -1,3 +1,11 @@
+<route>
+{
+  name: "name-override",
+  meta: {
+    requiresAuth: false
+  }
+}
+</route>
 <script setup>
 import { templateRef } from "@vueuse/core";
 // eslint-disable-next-line no-undef

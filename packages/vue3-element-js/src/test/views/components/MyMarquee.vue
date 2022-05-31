@@ -4,7 +4,14 @@
 * TODO:
 * [] 
 -->
-
+<route>
+{
+  name: "test-my-marquee",
+  meta: {
+    requiresAuth: false
+  }
+}
+</route>
 <script>
 export default {
   name: "",
@@ -13,7 +20,10 @@ export default {
 <script setup></script>
 
 <template>
-  <marquee-text :width="360" text="123456789abcdef_ asjdflja&nbsplsdm.zmv.120498702931#!~@^#(!@*()$_!$*@#!g"></marquee-text>
+  <marquee-text
+    :width="360"
+    text="123456789abcdef_ asjdflja&nbsplsdm.zmv.120498702931#!~@^#(!@*()$_!$*@#!g"
+  ></marquee-text>
   <!-- <marquee-text :width="360" text="123456789abcdef_ asjdfljalsdm.zmv.120498702931#!~@^#(!@*()$_!$*@#!g"></marquee-text> -->
 </template>
 

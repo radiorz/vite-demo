@@ -7,6 +7,12 @@
     "theme": "主题",
     "title": "标题"
   },
+  "form": {
+    "login": "登录",
+    "password": "密码",
+    "username": "用户名"
+  },
+  "lang is not available": "找不到该语言",
   "links": {
     "About": "关于",
     "Home": "首页",
@@ -14,11 +20,6 @@
   },
   "platform": {
     "title": "平台标题"
-  },
-  "form": {
-    "login": "登录",
-    "username": "用户名",
-    "password": "密码"
   },
   "theme": {
     "dark": "暗色主题",

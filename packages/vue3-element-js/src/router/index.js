@@ -1,6 +1,5 @@
 import env from "~/config/env";
 import { logger } from "~/plugins/logger.js";
-
 import { createRouter, createWebHashHistory } from "vue-router";
 import routes from "./routes.js";
 import testRoutes from "./test.routes.js";
@@ -13,6 +12,7 @@ const router = createRouter({
   routes: routes,
 });
 if (env.isDev) {
+  logger.debug("testRoutesWorks", testRoutes);
   router.addRoute(testRoutes);
 }
 setRouteHooks(router);

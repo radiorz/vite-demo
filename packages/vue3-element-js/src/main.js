@@ -10,6 +10,9 @@ import { ElForm } from "element-plus/es";
 import "~/style/index.scss"; // global css
 // app.js
 import { createPinia } from "pinia";
+import { useRegisterSW } from "virtual:pwa-register/vue";
+
+useRegisterSW();
 const app = createApp(App);
 appInject(app);
 app.use(ElForm);
