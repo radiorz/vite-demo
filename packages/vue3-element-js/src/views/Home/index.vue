@@ -7,10 +7,10 @@
 
 <script setup>
 import { useI18n } from "vue-i18n";
-import routes from "@/router/routes.js";
-// import testRoutes from "@/router/test.route.js";
-import layouts from "@/components/Layout";
-import CommonLayout from "@/components/Layout/CommonLayout.vue";
+import routes from "~/router/routes.js";
+// import testRoutes from "~/router/test.route.js";
+import layouts from "~/components/Layout";
+import CommonLayout from "~/components/Layout/CommonLayout.vue";
 import HeaderBar from "./HeaderBar.vue";
 const { t } = useI18n();
 // const routes = [

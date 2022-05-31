@@ -6,7 +6,7 @@
 -->
 
 <script setup>
-import vWaterMark from "@/directives/waterMark";
+import vWaterMark from "~/directives/waterMark";
 </script>
 
 <template>

@@ -6,7 +6,7 @@
 -->
 
 <script setup>
-import { useUserStore } from "@/stores/user";
+import { useUserStore } from "~/stores/user";
 const $log = inject("$log");
 const { name } = useUserStore();
 $log.info(`user`, name);

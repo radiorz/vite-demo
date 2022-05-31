@@ -12,7 +12,7 @@ export default {
 </script>
 <script setup>
 import { ElMenuItem, ElSubMenu } from "element-plus/es";
-import { makeWholePath } from "@/utils/route";
+import { makeWholePath } from "~/utils/route";
 const props = defineProps({
   father: {
     type: Object,

@@ -6,7 +6,7 @@
 -->
 
 <script setup>
-import CommonLayout from "@/components/Layout/CommonLayout.vue";
+import CommonLayout from "~/components/Layout/CommonLayout.vue";
 const layout = CommonLayout;
 </script>
 <template>

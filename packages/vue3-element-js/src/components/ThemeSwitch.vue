@@ -7,7 +7,7 @@
 
 <script setup>
 import { useI18n } from "vue-i18n";
-import { themeList, setTheme } from "@/composables/theme";
+import { themeList, setTheme } from "~/composables/theme";
 const { t } = useI18n();
 </script>
 

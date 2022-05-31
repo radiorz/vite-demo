@@ -7,7 +7,7 @@
 
 <script setup>
 $log.debug("this is test page");
-import testRoutes from "@/router/test.routes";
+import testRoutes from "~/router/test.routes";
 $log.debug("testRoutes", testRoutes);
 </script>
 

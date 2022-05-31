@@ -11,7 +11,7 @@ export default {
 };
 </script>
 <script setup>
-import vLazyImg from "@/directives/lazyImg";
+import vLazyImg from "~/directives/lazyImg";
 </script>
 
 <template>

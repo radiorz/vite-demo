@@ -1,5 +1,11 @@
 /* 默认主题色，即 Light 日间主题颜色 */
 :root {
+  --color-primary: 0, 0, 255;
+  --color-secondary: 0, 0, 123;
+  --color-success: 0, 255, 0;
+  --color-info: 0, 0, 255;
+  --color-warning: 255, 0, 0;
+  --color-error: 255, 0, 0;
   --color-highlight: 59, 130, 246;
   --color-bg-base: 249, 250, 251;
   --color-bg-nav: 243, 244, 246;

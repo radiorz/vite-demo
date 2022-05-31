@@ -1,6 +1,6 @@
 <script setup lang="ts">
-// import FormTest from "@/components/FormTest.vue";
-import ThemeChange from "@/components/ThemeChange/index.vue";
+// import FormTest from "~/components/FormTest.vue";
+import ThemeChange from "~/components/ThemeChange/index.vue";
 </script>
 
 <template>

@@ -11,7 +11,7 @@ export default {
 };
 </script>
 <script setup>
-import appStore from "@/stores";
+import appStore from "~/stores";
 </script>
 
 <template>

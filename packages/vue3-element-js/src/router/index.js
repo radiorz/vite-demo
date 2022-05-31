@@ -1,5 +1,5 @@
-import env from "@/config/env";
-import { logger } from "@/plugins/logger.js";
+import env from "~/config/env";
+import { logger } from "~/plugins/logger.js";
 
 import { createRouter, createWebHashHistory } from "vue-router";
 import routes from "./routes.js";

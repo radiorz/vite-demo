@@ -2,10 +2,10 @@
 import { createI18n } from "vue-i18n";
 
 // 项目中的国际化
-import common from "@locales/common";
-import zhCN from "@locales/zh-CN";
-import enUS from "@locales/en-US";
-import zhTW from "@locales/zh-TW";
+import common from "~locales/common";
+import zhCN from "~locales/zh-CN";
+import enUS from "~locales/en-US";
+import zhTW from "~locales/zh-TW";
 
 // element-plus 国际化
 import enLocale from "element-plus/lib/locale/lang/en";

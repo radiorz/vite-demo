@@ -11,7 +11,7 @@ export default {
 };
 </script>
 <script setup>
-import LoginForm from "@/components/Form/Login/index.vue";
+import LoginForm from "~/components/Form/Login/index.vue";
 </script>
 
 <template>

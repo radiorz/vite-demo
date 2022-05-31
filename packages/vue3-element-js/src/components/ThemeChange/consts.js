@@ -7,7 +7,7 @@ export const themes = [
     name: "🌚 dark",
     id: "dark",
   },
-  { name: "tiger-theme", id: "tiger-theme" },
+  { name: "🌝 tiger-theme", id: "tiger-theme" },
   {
     name: "🧁 cupcake",
     id: "cupcake",

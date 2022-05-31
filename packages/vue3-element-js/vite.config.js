@@ -90,8 +90,8 @@ export default () => {
     ],
     resolve: {
       alias: {
-        "@": resolve("src"),
-        "@locales": resolve("locales"),
+        "~": resolve("src"),
+        "~locales": resolve("locales"),
       },
       // 省略文件扩展名
       extensions: [".js", ".ts", ".jsx", ".tsx", ".json", ".vue"],
