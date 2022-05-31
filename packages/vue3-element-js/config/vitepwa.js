@@ -1,3 +1,8 @@
+/**
+ * @file: pwa 设置
+ * TODO
+ * [] 未起作用
+ */
 export default {
   includeAssets: ["favicon.svg"],
   manifest: false,
