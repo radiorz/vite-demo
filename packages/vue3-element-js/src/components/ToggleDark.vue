@@ -6,7 +6,7 @@
 -->
 
 <script setup>
-import * as dark from "~/composables/dark";
+import * as dark from "~/hooks/dark";
 let { isDark, toggleDark } = dark;
 // const isDark = 123;
 // const toogleDark = () => {};
