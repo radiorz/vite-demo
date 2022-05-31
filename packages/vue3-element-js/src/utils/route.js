@@ -8,5 +8,6 @@ export const makeRoute = (path, name, component) => ({
 });
 
 export const makeWholePath = (path, fatherPath) => {
+  if (path.startsWith("/")) return path;
   return [...fatherPath.split("/"), path].join("/");
 };

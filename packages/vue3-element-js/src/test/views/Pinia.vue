@@ -6,16 +6,11 @@
 -->
 
 <script setup>
-import { useUserStore } from "~/stores/user";
-const $log = inject("$log");
-const { name } = useUserStore();
-$log.info(`user`, name);
-$log.info(123);
-const { t } = useI18n();
+
 </script>
 
 <template>
-  <div class="app">{{ t("default.title") }}</div>
+  <EmptyLayout></EmptyLayout>
 </template>
 
 <style></style>
