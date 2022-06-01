@@ -11,7 +11,7 @@ function App() {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/About">About</Link>
+          <Link to="/about">About</Link>
         </li>
       </ul>
       {/* 路由们 */}
@@ -19,7 +19,7 @@ function App() {
         {/* 默认路由 */}
         <Route exact path="/" element={<Home />} />
         {/* 更多路由 */}
-        <Route path="/About" element={<About />} />
+        <Route path="/about" element={<About />} />
         {/* <Route exact path="/" render={() => <Redirect to="/login" />} /> */}
       </Routes>
     </BrowserRouter>
