@@ -17,9 +17,9 @@ function App() {
       {/* 路由们 */}
       <Routes>
         {/* 默认路由 */}
-        <Route exact path="/" component={Home} />
+        <Route exact path="/" element={<Home />} />
         {/* 更多路由 */}
-        <Route path="/About" component={About} />
+        <Route path="/About" element={<About />} />
         {/* <Route exact path="/" render={() => <Redirect to="/login" />} /> */}
       </Routes>
     </BrowserRouter>
