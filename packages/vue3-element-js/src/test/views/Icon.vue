@@ -11,7 +11,8 @@
 <template>
   <div>
     <IEpArrowDown />
-    <Icon icon="mdi-light:home" />
+    <!-- // 没有 @iconVue  -->
+    <!-- <Icon icon="mdi-light:home" /> -->
   </div>
 </template>
 

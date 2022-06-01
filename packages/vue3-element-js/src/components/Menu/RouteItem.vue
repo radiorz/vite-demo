@@ -56,8 +56,10 @@ const itemComponent = computed(() => {
   >
     <template #title>
       <!-- {{ father.routeIndex }} -->
-      {{ linkData.routePath }}
-      <span> {{ data.name }}</span>
+      <div class="flex flex-col items-start justify-center">
+        <span class="text-xl">{{ data.name }}</span>
+        <span>{{ linkData.routePath }}</span>
+      </div>
     </template>
     <template v-if="hasChildren">
       <!-- data.children.length{{ data.children.length }} -->
