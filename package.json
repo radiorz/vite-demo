@@ -20,6 +20,7 @@
     "vat:dev": "yarn workspace vue3-antd dev",
     "vvt:dev": "yarn workspace vue3-vuetify dev",
     "vet:dev": "yarn workspace vue3-element dev",
+    "raj:dev": "yarn workspace react-antd-js dev",
     "vej:build": "yarn workspace vue3-element-js build",
     "vat:build": "yarn workspace vue3-antd build",
     "vvt:build": "yarn workspace vue3-vuetify build",

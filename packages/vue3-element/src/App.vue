@@ -4,8 +4,8 @@ import ThemeChange from "~/components/ThemeChange/index.vue";
 </script>
 
 <template>
-  <!-- <FormTest /> -->
-  <ThemeChange />
+  <FormTest />
+  <!-- <ThemeChange /> -->
 </template>
 
 <style>
