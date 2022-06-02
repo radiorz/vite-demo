@@ -1946,6 +1946,11 @@
     "@lljj/vjsf-utils" "1.12.2"
     "@lljj/vue3-form-core" "1.13.0"
 
+"@mdi/font@5.9.55":
+  version "5.9.55"
+  resolved "https://registry.npmmirror.com/@mdi/font/-/font-5.9.55.tgz#41acd50b88073ded7095fc3029d8712b6e12f38e"
+  integrity sha512-jswRF6q3eq8NWpWiqct6q+6Fg/I7nUhrxYJfiEM8JJpap0wVJLQdbKtyS65GdlK7S7Ytnx3TTi/bmw+tBhkGmg==
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.npmmirror.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
@@ -2581,6 +2586,11 @@
   dependencies:
     source-map "^0.6.1"
 
+"@types/webfontloader@^1.0.0":
+  version "1.6.34"
+  resolved "https://registry.npmmirror.com/@types/webfontloader/-/webfontloader-1.6.34.tgz#3ad1530c3cf2827d3ed80679b4f8c688e6c6957c"
+  integrity sha512-yNIPDl3P1yK/ag9C8CdleEhWrtU1myGr3cxb0yEBN/tkCYoGP5PbQa53mQCXcOLFAvBFzJJQfuEahOZ0ARakqw==
+
 "@types/webpack-dev-server@^3":
   version "3.11.6"
   resolved "https://registry.npmmirror.com/@types/webpack-dev-server/-/webpack-dev-server-3.11.6.tgz#d8888cfd2f0630203e13d3ed7833a4d11b8a34dc"
@@ -3069,6 +3079,14 @@
     "@types/markdown-it" "^10.0.0"
     "@types/webpack-dev-server" "^3"
     webpack-chain "^6.0.0"
+
+"@vuetify/loader-shared@^1.4.0":
+  version "1.4.0"
+  resolved "https://registry.npmmirror.com/@vuetify/loader-shared/-/loader-shared-1.4.0.tgz#b993665d126660355924bd4f6d2c176f9bf1e738"
+  integrity sha512-aBlBuDC40tRRLFXXeOMB2mQiIOI4GTaezxv4RjLE4NzC3g2QIQH6yc51E7vWHHp621Ys4vaU3Yo+HdO5lbfJ9g==
+  dependencies:
+    find-cache-dir "^3.3.2"
+    upath "^2.0.1"
 
 "@vueuse/components@^8.6.0":
   version "8.6.0"
@@ -6645,7 +6663,7 @@ find-cache-dir@^2.1.0:
     make-dir "^2.0.0"
     pkg-dir "^3.0.0"
 
-find-cache-dir@^3.3.1:
+find-cache-dir@^3.3.1, find-cache-dir@^3.3.2:
   version "3.3.2"
   resolved "https://registry.npmmirror.com/find-cache-dir/-/find-cache-dir-3.3.2.tgz#b30c5b6eff0730731aea9bbd9dbecbd80256d64b"
   integrity sha512-wXZV5emFEjrridIgED11OoUKLxiYjAcqot/NJdAkOhlJ+vGzwhOAfcG5OX1jP+S0PcjEn8bdMJv+g2jwQ3Onig==
@@ -11473,6 +11491,11 @@ ripemd160@^2.0.0, ripemd160@^2.0.1:
     hash-base "^3.0.0"
     inherits "^2.0.1"
 
+roboto-fontface@*:
+  version "0.10.0"
+  resolved "https://registry.npmmirror.com/roboto-fontface/-/roboto-fontface-0.10.0.tgz#7eee40cfa18b1f7e4e605eaf1a2740afb6fd71b0"
+  integrity sha512-OlwfYEgA2RdboZohpldlvJ1xngOins5d7ejqnIBWr9KaMxsnBqotpptRXTyfNRLnFpqzX6sTDt+X+a+6udnU8g==
+
 rollup-plugin-terser@^7.0.0:
   version "7.0.2"
   resolved "https://registry.npmmirror.com/rollup-plugin-terser/-/rollup-plugin-terser-7.0.2.tgz#e8fbba4869981b2dc35ae7e8a502d5c6c04d324d"
@@ -13263,6 +13286,14 @@ vite-plugin-theme@^0.8.6:
     esbuild-plugin-alias "^0.1.2"
     tinycolor2 "^1.4.2"
 
+vite-plugin-vuetify@^1.0.0-alpha.0:
+  version "1.0.0-alpha.11"
+  resolved "https://registry.npmmirror.com/vite-plugin-vuetify/-/vite-plugin-vuetify-1.0.0-alpha.11.tgz#7df951f0a65b8d73b0f3b66b917f99a20e3eb6de"
+  integrity sha512-YqnirQhGfG1skj1Z41DVh0WqSjoJ/BtcfZvnGVkcBrfRe+pFg4lHV2mI3K5LdjCeBxzHqofxlz6J6ciyRvrqcA==
+  dependencies:
+    "@vuetify/loader-shared" "^1.4.0"
+    debug "^4.3.3"
+
 vite@^2.9.7, vite@^2.9.9:
   version "2.9.9"
   resolved "https://registry.npmmirror.com/vite/-/vite-2.9.9.tgz#8b558987db5e60fedec2f4b003b73164cb081c5e"
@@ -13494,6 +13525,11 @@ wcwidth@^1.0.0:
   integrity sha512-XHPEwS0q6TaxcvG85+8EYkbiCux2XtWG2mkc47Ng2A77BQu9+DqIOJldST4HgPkuea7dvKSj5VgX3P1d4rW8Tg==
   dependencies:
     defaults "^1.0.3"
+
+webfontloader@^1.0.0:
+  version "1.6.28"
+  resolved "https://registry.npmmirror.com/webfontloader/-/webfontloader-1.6.28.tgz#db786129253cb6e8eae54c2fb05f870af6675bae"
+  integrity sha512-Egb0oFEga6f+nSgasH3E0M405Pzn6y3/9tOVanv/DLfa1YBIgcv90L18YyWnvXkRbIM17v5Kv6IT2N6g1x5tvQ==
 
 webidl-conversions@^3.0.0:
   version "3.0.1"
