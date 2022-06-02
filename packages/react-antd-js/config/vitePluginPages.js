@@ -1,7 +1,7 @@
-import Page from 'vite-plugin-pages'
+import Page from "vite-plugin-pages";
 
 //  用于 test 路由的生成 比较方便
-const config =  {
+const config = {
   dirs: [
     // { dir: "src/views", baseRoute: "" },
     { dir: "src/test/views", baseRoute: "test" },
@@ -10,4 +10,4 @@ const config =  {
   ],
   // extensions: ["vue", "md"],
 };
-export default Page(config);
+export default () => Page(config);
