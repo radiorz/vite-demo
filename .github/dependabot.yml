@@ -14,7 +14,7 @@ updates:
     # Look for `package.json` and `lock` files in the `root` directory
     directory: "/packages/react-antd-js"
     schedule:
-      interval: "weekly"
+      interval: "daily"
   - package-ecosystem: "npm"
     # Look for `package.json` and `lock` files in the `root` directory
     directory: "/packages/vue3-antd"
