@@ -9,39 +9,34 @@ updates:
     # Look for `package.json` and `lock` files in the `root` directory
     directory: "/packages/docs"
     schedule:
-      interval: "daily"
+      interval: "weekly"
   - package-ecosystem: "npm"
     # Look for `package.json` and `lock` files in the `root` directory
     directory: "/packages/react-antd-js"
     schedule:
-      interval: "daily"
-  - package-ecosystem: "npm"
-    # Look for `package.json` and `lock` files in the `root` directory
-    directory: "/packages/react-antd-js"
-    schedule:
-      interval: "daily"
+      interval: "weekly"
   - package-ecosystem: "npm"
     # Look for `package.json` and `lock` files in the `root` directory
     directory: "/packages/vue3-antd"
     schedule:
-      interval: "daily"
+      interval: "weekly"
   - package-ecosystem: "npm"
     # Look for `package.json` and `lock` files in the `root` directory
     directory: "/packages/vue3-element"
     schedule:
-      interval: "daily"
+      interval: "weekly"
   - package-ecosystem: "npm"
     # Look for `package.json` and `lock` files in the `root` directory
     directory: "/packages/vue3-element-js"
     schedule:
-      interval: "daily"
+      interval: "weekly"
   - package-ecosystem: "npm"
     # Look for `package.json` and `lock` files in the `root` directory
     directory: "/packages/vue3-vuetify"
     schedule:
-      interval: "daily"
+      interval: "weekly"
   - package-ecosystem: "npm"
     # Look for `package.json` and `lock` files in the `root` directory
     directory: "/libs/logger"
     schedule:
-      interval: "daily"
+      interval: "weekly"
