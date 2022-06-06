@@ -34,3 +34,15 @@ export function add() {
   };
   return fn;
 }
+
+function cook(strs, ...substs) {
+  return substs.reduce((prev, cur, i) => prev + cur + strs[i + 1], strs[0]);
+}
+/**
+ * 用于重复拼接字符串
+ */
+export function repeat(times) {
+  return function (...args) {
+    return cook(...args).repeat(times);
+  };
+}
