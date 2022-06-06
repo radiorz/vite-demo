@@ -4,6 +4,9 @@ import Pages from "./config/vitePluginPages";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(), Pages()],
+  server: {
+    port: 5000,
+  },
   resolve: {
     alias: {
       "~": "/src",

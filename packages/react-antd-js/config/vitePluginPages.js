@@ -8,6 +8,12 @@ const config = {
     // { dir: "src/features/**/pages", baseRoute: "features" },
     // { dir: "src/admin/pages", baseRoute: "admin" },
   ],
-  // extensions: ["vue", "md"],
+  exclude: [
+    // 避免普通 js 也被撸进来,
+    "**/*.js",
+    // 避免组件也被撸进来
+    "**/components/*",
+  ],
+  // extensions: ["jsx"],
 };
 export default () => Page(config);

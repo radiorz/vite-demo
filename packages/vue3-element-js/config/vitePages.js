@@ -6,5 +6,4 @@ export default {
     // { dir: "src/features/**/pages", baseRoute: "features" },
     // { dir: "src/admin/pages", baseRoute: "admin" },
   ],
-  // extensions: ["vue", "md"],
 };

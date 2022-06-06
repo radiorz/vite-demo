@@ -1,4 +1,4 @@
-import "./App.css";
+import "./index.css";
 import { Suspense } from "react";
 import {
   Link,
@@ -7,9 +7,10 @@ import {
   BrowserRouter as Router,
   useRoutes,
 } from "react-router-dom";
-import Home from "./views/Home/index.jsx";
-import About from "./views/About";
-import NotFound from "./views/NotFound";
+import Home from "~/views/Home/index.jsx";
+import About from "~/views/About";
+import NotFound from "~/views/NotFound";
+// import Counter from "~/views/counter";
 import routes from "~react-pages";
 console.log("routes", routes);
 const NestLayout = ({ children, i }) => (
@@ -32,6 +33,9 @@ function App() {
             <Link to="/about">About</Link>
           </li>
           <li>
+            <Link to="/test/counter">Counter</Link>
+          </li>
+          <li>
             <Link to="/404">404</Link>
           </li>
         </ul>
@@ -42,15 +46,15 @@ function App() {
           {/* 更多路由 */}
           <Route path="/about" element={<About />} />
           <Route path="/404" element={<NotFound></NotFound>} />
-          {/* 嵌套式的路由 */}
-          <Route path="/nest" element={<NestLayout i={1} />}>
+          {/* TODO 嵌套式的路由 */}
+          {/* <Route path="/nest" element={<NestLayout i={1} />}>
             <Route path="nest1" element={<div>121121212121</div>} />
             <Route path="nest" element={<NestLayout i={2} />}>
               <Route path="nest" element={<NestLayout i={3} />}>
                 <Route path="nest" element={<div>4</div>} />
               </Route>
             </Route>
-          </Route>
+          </Route> */}
         </Routes>
         {/* 测试的路由 */}
         {useRoutes(routes)}
