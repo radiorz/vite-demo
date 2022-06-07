@@ -1,12 +1,22 @@
 {
   "name": "@tikkhun/logger",
   "version": "1.0.3",
-  "description": "",
-  "main": "src/index.js",
+  "description": "日志打印,致敬少聪日志",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "vite build"
+  },
+  "main": "./dist/logger.umd.js",
+  "module": "./dist/logger.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/logger.es.js",
+      "require": "./dist/logger.umd.js"
+    }
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "tikkhun",
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^2.9.9"
+  }
 }
