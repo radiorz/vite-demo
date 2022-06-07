@@ -25,9 +25,29 @@ export const todoSlice = createSlice({
         return todo.id === id ? { ...todo, done: !todo.done } : todo;
       });
     },
+    updateEditing(state, action) {
+      const id = action.payload;
+      state.todos = state.todos.map((todo) => {
+        if (todo.id === id) return { ...todo, editing: !todo.editing };
+        return todo;
+      });
+    },
+    updateMessage(state, action) {
+      const id = action.payload.id;
+      const message = action.payload.message;
+      if (typeof message !== "string") return;
+      state.todos = state.todos.map((todo) => {
+        if (todo.id === id) return { ...todo, message };
+        return todo;
+      });
+    },
+    clearDone(state,action){
+      
+    }
   },
 });
 // Action creators are generated for each case reducer function
-export const { add, removeById, updateDone } = todoSlice.actions;
+export const { add, removeById, updateDone, updateEditing, updateMessage } =
+  todoSlice.actions;
 
 export default todoSlice.reducer;
