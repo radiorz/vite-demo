@@ -1,6 +1,8 @@
 <script setup lang="ts">
 // import FormTest from "~/components/FormTest.vue";
 import ThemeChange from "~/components/ThemeChange/index.vue";
+import useLogger from "@tikkhun/logger";
+const logger = useLogger();
 </script>
 
 <template>
