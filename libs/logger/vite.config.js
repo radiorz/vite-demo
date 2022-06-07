@@ -11,7 +11,8 @@ export default defineConfig({
     lib: {
       entry: resolve("src/index.js"),
       // 库暴露的全局变量
-      name: "useLogger",
+      name: "logger",
+
     },
   },
 });
