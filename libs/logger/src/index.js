@@ -1,5 +1,5 @@
 // 设置一个logger 并且设定等级
-const LOG_LEVELS = {
+export const LOG_LEVELS = {
   NOTSET: 0,
   DEBUG: 1,
   INFO: 2,
