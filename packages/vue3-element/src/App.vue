@@ -1,13 +1,12 @@
 <script setup lang="ts">
-// import FormTest from "~/components/FormTest.vue";
-import ThemeChange from "~/components/ThemeChange/index.vue";
-import useLogger from "@tikkhun/logger";
-const logger = useLogger();
+import JsonForm from "@tikkhun/json-form";
 </script>
 
 <template>
-  <FormTest />
-  <!-- <ThemeChange /> -->
+  <div>
+    123
+    <JsonForm />
+  </div>
 </template>
 
 <style>

@@ -1,0 +1,30 @@
+{
+  "name": "@tikkhun/json-form",
+  "version": "1.0.5",
+  "description": "",
+  "main": "./dist/json-form.es.js",
+  "module": "./dist/json-form.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/json-form.es.js",
+      "require": "./dist/json-form.es.js"
+    }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "vite build",
+    "dev": "vite .",
+    "ncu": "ncu -u"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "tailwind": "^4.0.0",
+    "vue": "^3.2.37"
+  },
+  "devDependencies": {
+    "vite": "^2.9.10",
+    "@vitejs/plugin-vue": "^2.3.3"
+  }
+}
