@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-
+import { nanoid } from "nanoid";
 /**
  * 初始state
  */
@@ -12,7 +12,7 @@ export const todoSlice = createSlice({
   initialState,
   reducers: {
     add: (state, action) => {
-      const id = state.todos.length;
+      const id = nanoid();
       state.todos.push({ id, message: action.payload, done: false });
     },
     removeById: (state, action) => {
@@ -41,9 +41,7 @@ export const todoSlice = createSlice({
         return todo;
       });
     },
-    clearDone(state,action){
-      
-    }
+    clearDone(state, action) {},
   },
 });
 // Action creators are generated for each case reducer function
