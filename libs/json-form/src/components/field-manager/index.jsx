@@ -16,8 +16,10 @@ export default defineComponent({
   setup({ schema, data }) {
     let { widget } = schema;
     if (!widget) widget = "text-field";
-    const asyncFieldComponent = defineAsyncComponent(() =>
-      import(`../widget/${widget}.vue`)
+    const widgets = import.meta.glob("../widget/*.vue");
+    console.log(widgets);
+    const asyncFieldComponent = defineAsyncComponent(
+      widgets[`../widget/${widget}.vue`]
     );
 
     return () => (

@@ -12,6 +12,10 @@ export default {
 </script>
 <script setup>
 import JsonForm from "./index.js";
+const data = {
+  username: "",
+  password: "",
+};
 const schema = {
   type: "object",
   properties: {
@@ -35,7 +39,7 @@ const uiSchema = {
 <template>
   <div>
     // 这是测试 jsonSchema
-    <JsonForm :schema="schema"></JsonForm>
+    <JsonForm v-model="data" :schema="schema"></JsonForm>
   </div>
 </template>
 
