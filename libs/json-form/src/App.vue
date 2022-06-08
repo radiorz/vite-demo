@@ -13,14 +13,29 @@ export default {
 <script setup>
 import JsonForm from "./index.js";
 const schema = {
-  
-}
+  type: "object",
+  properties: {
+    username: {
+      type: "string",
+      default: "",
+    },
+    password: {
+      type: "string",
+      default: "",
+    },
+  },
+};
+const uiSchema = {
+  username: {
+    widget: "text-field",
+  },
+};
 </script>
 
 <template>
   <div>
     // 这是测试 jsonSchema
-    <JsonForm schema=""></JsonForm>
+    <JsonForm :schema="schema"></JsonForm>
   </div>
 </template>
 

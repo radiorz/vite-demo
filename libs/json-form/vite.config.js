@@ -1,6 +1,9 @@
 import { defineConfig } from "vite";
-import vue from "@vitejs/plugin-vue";
 import { resolve } from "path";
+import vue from "@vitejs/plugin-vue";
+import vueJsx from "@vitejs/plugin-vue-jsx";
+import AutoImport from "unplugin-auto-import/vite";
+import Components from "unplugin-vue-components/vite";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -11,8 +14,24 @@ export default defineConfig({
     alias: {
       "~": resolve(__dirname, "./src"),
     },
+    extensions: [".js", ".ts", ".jsx", ".tsx", ".json", ".vue"],
   },
-  plugins: [vue()],
+  plugins: [
+    vue(),
+    vueJsx(), // 自动导入
+    AutoImport({
+      // 记录
+      dts: "src/auto-imports.d.ts",
+      // 自动导入 Vue 相关函数，如：ref, reactive, toRef 等
+      imports: ["vue"],
+    }),
+    // 自动导入组件
+    Components({
+      dts: "src/components.d.ts", // 记录
+      include: [/\.vue$/, /\.[tj]sx?$/],
+    }),
+  ],
+  base: "./",
   build: {
     lib: {
       // 无法打包umd，因为用到了dynamic import，反正是自己用，所以不打umd

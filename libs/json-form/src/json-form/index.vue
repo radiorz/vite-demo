@@ -11,15 +11,17 @@ export default {
 };
 </script>
 <script setup>
+import FieldManager from "~/components/field-manager";
 const props = defineProps({
   schema: { type: Object, default: () => ({}) },
   uiSchema: { type: Object, default: () => ({}) },
+  data: { type: Object, default: () => ({}) },
 });
 </script>
 
 <template>
   <div class="json-form">
-    {{ props.schema }}
+    <field-manager v-model="data" :schema="schema"></field-manager>
     {{ props.uiSchema }}
   </div>
 </template>
