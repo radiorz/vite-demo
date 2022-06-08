@@ -1,14 +1,6 @@
-// 设置一个logger 并且设定等级
-export const LOG_LEVELS = {
-  NOTSET: 0,
-  DEBUG: 1,
-  INFO: 2,
-  WARN: 3,
-  ERROR: 4,
-  FATAL: 5,
-};
+import { makeLazy } from "./utils/makeLazy";
+export { LOG_LEVELS } from "./utils/constants";
 const isDev = process.env.NODE_ENV === "development";
-
 function getLogger(level) {
   const adapter = Object.assign({}, console);
   adapter.fatal = adapter.error;
@@ -47,18 +39,6 @@ function setPrefix(prefixs = []) {
     return logger;
   };
 }
-// 可使用函数
-const makeLazy = (func) => {
-  return (...args) => {
-    const lastArg = args[args.length - 1];
-    if (typeof lastArg === "function") {
-      args.pop();
-      func(...args, lastArg());
-    } else {
-      func(...args);
-    }
-  };
-};
 
 // level: "INFO";
 export function useLogger(

@@ -9,13 +9,20 @@ export default defineComponent({
     },
     data: {
       type: [Object, String],
-      default: () => ({}),
     },
   },
   computed: {},
   setup({ schema, data }) {
     let { widget } = schema;
     if (!widget) widget = "text-field";
+    // 设置 data基础值
+    if (!data) {
+      if (schema?.type === "object") {
+        data = reactive({});
+      } else if (schema?.type === "string") {
+        data = "";
+      }
+    }
     const widgets = import.meta.glob("../widget/*.vue");
     console.log(widgets);
     const asyncFieldComponent = defineAsyncComponent(
@@ -28,10 +35,13 @@ export default defineComponent({
         {schema?.type === "object" ? (
           Object.entries(schema.properties).map(([key, value]) => {
             return (
-              <field-manager
-                v-model={data[key]}
-                schema={{ ...value, name: key }}
-              ></field-manager>
+              <>
+                <>{data}</>
+                <field-manager
+                  v-model={data[key]}
+                  schema={{ ...value, name: key }}
+                ></field-manager>
+              </>
             );
           })
         ) : schema?.type === "array" ? (
@@ -39,7 +49,8 @@ export default defineComponent({
         ) : (
           <>
             <label htmlFor="">{schema?.name}</label>
-            <asyncFieldComponent v-model={data} />
+            {typeof data}
+            <input value={data} onInput={(e) => data === e.target.value} />
           </>
         )}
       </>
