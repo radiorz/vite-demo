@@ -1,6 +1,6 @@
 {
   "name": "@tikkhun/logger",
-  "version": "1.0.3",
+  "version": "1.0.6",
   "description": "日志打印,致敬少聪日志",
   "scripts": {
     "build": "vite build",

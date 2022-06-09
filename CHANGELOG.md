@@ -3,6 +3,42 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.6](https://gitee.com/radiorz/vue3-admin-ts/compare/v1.0.5...v1.0.6) (2022-06-09)
+
+
+### Bug Fixes
+
+* 修复log_levels 未引入问题 ([c6800aa](https://gitee.com/radiorz/vue3-admin-ts/commits/c6800aa82af70fba5b26c9ae40a90968b291c508))
+
+
+### Features
+
+* **@tikkhun/logger:** 测试可用 ([1ee9760](https://gitee.com/radiorz/vue3-admin-ts/commits/1ee97606e12c72c287a78d9b4b042b48dd1c25d7))
+* 抽离adapter 代码 ([42d4da4](https://gitee.com/radiorz/vue3-admin-ts/commits/42d4da4fac6771312aa3fcd50e2075be1fd5e96d))
+* 动态获取组件vite 使用 import.meta.glob ([aa7954d](https://gitee.com/radiorz/vue3-admin-ts/commits/aa7954dfa440bd25e11abedd18e8f552e451ed4a))
+* 自动化依赖更新机器人 ([4466b40](https://gitee.com/radiorz/vue3-admin-ts/commits/4466b402aa42d1fc670c8fb6527f04f1d87c2f21))
+* 自动机器人 ([35773f7](https://gitee.com/radiorz/vue3-admin-ts/commits/35773f79d4c144229fc93b2333d46a98487f0765))
+* **json-form:** json-form 打包可用，功能未开发 ([a43d005](https://gitee.com/radiorz/vue3-admin-ts/commits/a43d00590374c2383258ba8c3e6089504af45536))
+* **logger:** 不适用 default 导入 修改 logger的代码结构 ([0b73049](https://gitee.com/radiorz/vue3-admin-ts/commits/0b7304930fb075690d44918755279497a891d385))
+* **logger:** 设置通用日志打印 ([80da02d](https://gitee.com/radiorz/vue3-admin-ts/commits/80da02dd3cc1f8c37645829ecd9e8ea03421ab8a))
+* **logger:** logger 较为清晰，代码易读 ([b275020](https://gitee.com/radiorz/vue3-admin-ts/commits/b27502062bed7e2a7d9e45352a030822c0ae26f8))
+* **react-antd-js:** 尝试使用vite-plugin-pages ([476a33f](https://gitee.com/radiorz/vue3-admin-ts/commits/476a33f58c5154ed201262c8845edf3433956cb7))
+* **react-antd-js:** 成功添加rtk store 管理 ([ae9aee3](https://gitee.com/radiorz/vue3-admin-ts/commits/ae9aee37614903a4f5a52b7b7c94384203ce7c47))
+* **react-antd-js:** 添加react-antd-js ([566cd13](https://gitee.com/radiorz/vue3-admin-ts/commits/566cd1373a9c73dc58281614477bc457da0ac263))
+* **react-antd-js:** 完善 todo ([047fac8](https://gitee.com/radiorz/vue3-admin-ts/commits/047fac842525a0433b6ca339eede2d4d33b709fb))
+* **react-antd-js:** 新增路由和自动化的路由 ([088b8ea](https://gitee.com/radiorz/vue3-admin-ts/commits/088b8ea4ce0a9a3064d17bfdf78e959c79bd42b0))
+* **react-antd-js:** 修复路由错误 ([ae49391](https://gitee.com/radiorz/vue3-admin-ts/commits/ae493915443d365cd4534d6d07ebed5056a73ee3))
+* **react-antd-js:** todo rtk ([4698cb0](https://gitee.com/radiorz/vue3-admin-ts/commits/4698cb0f6311b84b5b40885b74644ec9ee792285))
+* **vue2-element-js:** 添加 字符串 repeat 函数 ([b41fa0b](https://gitee.com/radiorz/vue3-admin-ts/commits/b41fa0b220455b756dd3e06a9c53ee8042bc336e))
+* **vue3-element-js:** 设置 notfound 页面 ([4ac62e0](https://gitee.com/radiorz/vue3-admin-ts/commits/4ac62e0cab88fb302e371ce0d565fec2dc43765b))
+* **vue3-element-js:** 使用 overlay scrollbars ([f5febbd](https://gitee.com/radiorz/vue3-admin-ts/commits/f5febbd6184bcb36c1174695589310992546b7b1))
+* **vue3-element-js:** 添加 字符串 repeat 函数 ([ca22aea](https://gitee.com/radiorz/vue3-admin-ts/commits/ca22aea0b8496462d21886252395b100a84ef6e6))
+* **vue3-vuetify:** 使用 vue-cli 添加 vuetify ([3b53d29](https://gitee.com/radiorz/vue3-admin-ts/commits/3b53d29278aeb9e96818edaad0a25a65c3f1681c))
+
+
+
+
+
 ## [1.0.5](https://gitee.com/radiorz/vue3-admin-ts/compare/v1.0.4...v1.0.5) (2022-05-31)
 
 

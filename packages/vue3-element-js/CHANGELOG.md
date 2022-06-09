@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.6](https://gitee.com/radiorz/vue3-admin-ts/compare/v1.0.5...v1.0.6) (2022-06-09)
+
+
+### Features
+
+* **react-antd-js:** 成功添加rtk store 管理 ([ae9aee3](https://gitee.com/radiorz/vue3-admin-ts/commits/ae9aee37614903a4f5a52b7b7c94384203ce7c47))
+* **react-antd-js:** 添加react-antd-js ([566cd13](https://gitee.com/radiorz/vue3-admin-ts/commits/566cd1373a9c73dc58281614477bc457da0ac263))
+* **vue2-element-js:** 添加 字符串 repeat 函数 ([b41fa0b](https://gitee.com/radiorz/vue3-admin-ts/commits/b41fa0b220455b756dd3e06a9c53ee8042bc336e))
+* **vue3-element-js:** 设置 notfound 页面 ([4ac62e0](https://gitee.com/radiorz/vue3-admin-ts/commits/4ac62e0cab88fb302e371ce0d565fec2dc43765b))
+* **vue3-element-js:** 使用 overlay scrollbars ([f5febbd](https://gitee.com/radiorz/vue3-admin-ts/commits/f5febbd6184bcb36c1174695589310992546b7b1))
+
+
+
+
+
 ## [1.0.5](https://gitee.com/radiorz/vue3-admin-ts/compare/v1.0.4...v1.0.5) (2022-05-31)
 
 

@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.6](https://gitee.com/radiorz/vue3-admin-ts/compare/v1.0.5...v1.0.6) (2022-06-09)
+
+
+### Features
+
+* **@tikkhun/logger:** 测试可用 ([1ee9760](https://gitee.com/radiorz/vue3-admin-ts/commits/1ee97606e12c72c287a78d9b4b042b48dd1c25d7))
+* **json-form:** json-form 打包可用，功能未开发 ([a43d005](https://gitee.com/radiorz/vue3-admin-ts/commits/a43d00590374c2383258ba8c3e6089504af45536))
+
+
+
+
+
 ## [1.0.5](https://gitee.com/radiorz/vue3-admin-ts/compare/v1.0.4...v1.0.5) (2022-05-31)
 
 
