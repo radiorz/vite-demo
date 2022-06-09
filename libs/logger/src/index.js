@@ -1,5 +1,7 @@
 import { makeLazy } from "./utils";
+import { LOG_LEVELS } from "./utils/constants";
 export { LOG_LEVELS } from "./utils/constants";
+
 const isDev = process.env.NODE_ENV === "development";
 function getLogger(level) {
   const adapter = Object.assign({}, console);
