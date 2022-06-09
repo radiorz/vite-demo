@@ -1,4 +1,4 @@
-import { makeLazy } from "./utils/makeLazy";
+import { makeLazy } from "./utils";
 export { LOG_LEVELS } from "./utils/constants";
 const isDev = process.env.NODE_ENV === "development";
 function getLogger(level) {
@@ -56,4 +56,4 @@ export function useLogger(
   return logger;
 }
 // 定制前缀
-export default useLogger("logger");
+export const logger = useLogger("logger");

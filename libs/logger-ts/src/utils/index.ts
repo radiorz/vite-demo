@@ -1,5 +1,5 @@
 // 可使用函数
-export const makeLazy = (func) => {
+const makeLazy = (func: Function) => {
   return (...args) => {
     const lastArg = args[args.length - 1];
     if (typeof lastArg === "function") {

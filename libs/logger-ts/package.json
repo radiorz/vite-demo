@@ -1,0 +1,24 @@
+{
+  "name": "@tikkhun/logger-ts",
+  "version": "1.0.3",
+  "description": "日志打印,致敬少聪日志",
+  "scripts": {
+    "build": "vite build",
+    "ncu": "ncu -u"
+  },
+  "main": "./dist/logger.umd.js",
+  "module": "./dist/logger.es.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/logger.es.js",
+      "require": "./dist/logger.umd.js"
+    }
+  },
+  "keywords": [],
+  "author": "tikkhun",
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^2.9.10"
+  }
+}
