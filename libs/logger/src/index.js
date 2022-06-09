@@ -3,21 +3,23 @@ import { LOG_LEVELS } from "./utils/constants";
 export { LOG_LEVELS } from "./utils/constants";
 
 const isDev = process.env.NODE_ENV === "development";
-function getLogger(level) {
+function getLogger(level = 0) {
   const adapter = Object.assign({}, console);
-  adapter.fatal = adapter.error;
+  adapter.level = level;
+  if (!adapter.fatal) adapter.fatal = adapter.error;
+  if (!adapter.debug) adapter.debug = adapter.log;
+  if (!adapter.info) adapter.info = adapter.log;
   // 写好点
-  if (level > LOG_LEVELS.INFO) {
+  if (adapter.level > LOG_LEVELS.INFO) {
     adapter.info = () => {};
-    adapter.debug = () => {};
-    return adapter;
   }
-  adapter.info = adapter.log;
   if (level > LOG_LEVELS.DEBUG) {
     adapter.debug = () => {};
-    return adapter;
   }
-  adapter.debug = adapter.log;
+  if (level > LOG_LEVELS.WARN) {
+    adapter.warn = () => {};
+  }
+
   return adapter;
 }
 
@@ -26,35 +28,30 @@ function getLogger(level) {
  * @param {*} prefixs 前缀
  * @return {*}
  */
-function setPrefix(prefixs = []) {
-  return (logger = getLogger()) => {
-    Object.keys(LOG_LEVELS).forEach((type) => {
-      const out = logger[type.toLowerCase()] || function () {};
-      const lazyOut = makeLazy(out);
-      if (lazyOut) {
-        // 覆写logger方法
-        logger[type.toLowerCase()] = (...args) => {
-          return lazyOut.call(logger, `[${type}]`, ...prefixs, ...args);
-        };
-      }
-    });
-    return logger;
+function setPrefixes(func, type, prefixes = []) {
+  return function (...args) {
+    return func(`[${type}]`, ...prefixes, ...args);
   };
 }
 
 // level: "INFO";
 export function useLogger(
   name = "loggerName",
-  { prefixs = [], level = isDev ? LOG_LEVELS.DEBUG : LOG_LEVELS.INFO } = {}
+  { prefixes = [], level = isDev ? LOG_LEVELS.DEBUG : LOG_LEVELS.INFO } = {}
 ) {
   const logger = getLogger(level);
   //
-  if (!prefixs.length) {
-    prefixs.push(name);
+  if (!prefixes.length) {
+    prefixes.push(name);
   }
-  prefixs = prefixs.map((item) => `[${item}]`);
-  setPrefix(prefixs)(logger);
-
+  prefixes = prefixes.map((item) => `[${item}]`);
+  Object.entries(logger)
+    .filter(([type, func]) => {
+      return typeof func === "function";
+    })
+    .map(([type, func]) => [type, setPrefixes(func, type, prefixes)])
+    .map(([type, func]) => [type, makeLazy(func)])
+    .forEach(([type, func]) => (logger[type] = func.bind(logger)));
   return logger;
 }
 // 定制前缀
