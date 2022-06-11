@@ -1094,9 +1094,9 @@
   integrity sha512-H9XAx3hc0BQHY6l+IFSWHDySypcXsvsuLhgYLUGywmJ5pswRVQJUHpOsobnLYp2ZUaUlKiKDrgWWhosOwAEM8Q==
 
 "@iconify/json@^2.1.57":
-  version "2.1.57"
-  resolved "https://registry.npmmirror.com/@iconify/json/-/json-2.1.57.tgz#50473ad3ac2d2136c1092a1e5f287f3fce2373ed"
-  integrity sha512-l/X8rc5ksvYSwOKPICNPy8l033hZQugdvB4OeGLrTZ40iVmp1Lg0NEsOZpY6Glk8S7spzO8YWXCCxS//4idM7A==
+  version "2.1.59"
+  resolved "https://registry.yarnpkg.com/@iconify/json/-/json-2.1.59.tgz#4b352af1c1a5a07f31eb53ea74a579e83718ae1d"
+  integrity sha512-5tr6Fr9LAv+6WGVmsCn5tJlRi+tRy+roS8vSGxqIcCTL96S9tTKApK1PIkj+Rh2BSts+fzkxxp57+Q4O4Bd68Q==
   dependencies:
     "@iconify/types" "^1.1.0"
     pathe "^0.2.0"
@@ -2494,10 +2494,10 @@
   resolved "https://registry.npmmirror.com/@types/ms/-/ms-0.7.31.tgz#31b7ca6407128a3d2bbc27fe2d21b345397f6197"
   integrity sha512-iiUgKzV9AuaEkZqkOLDIvlQiL6ltuZd9tGcW3gwpnX8JbuiuhFlEGmmFXEXkN50Cvq7Os88IY2v0dkDqXYWVgA==
 
-"@types/node@*", "@types/node@17.0.40":
-  version "17.0.40"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.40.tgz#76ee88ae03650de8064a6cf75b8d95f9f4a16090"
-  integrity sha512-UXdBxNGqTMtm7hCwh9HtncFVLrXoqA3oJW30j6XWp5BH/wu3mVeaxo7cq5benFdBw34HB3XDT2TRPI7rXZ+mDg==
+"@types/node@*", "@types/node@17.0.42":
+  version "17.0.42"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.42.tgz#d7e8f22700efc94d125103075c074396b5f41f9b"
+  integrity sha512-Q5BPGyGKcvQgAMbsr7qEGN/kIPN6zZecYYABeTDBizOsau+2NMdSVTar9UQw21A2+JyA2KRNDYaYrPB0Rpk2oQ==
 
 "@types/node@^14.17.1":
   version "14.18.18"
