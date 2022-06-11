@@ -11790,17 +11790,10 @@ rollup-plugin-terser@^7.0.0:
     serialize-javascript "^4.0.0"
     terser "^5.0.0"
 
-rollup@^2.43.1, rollup@^2.70.2:
+rollup@^2.43.1, rollup@^2.59.0, rollup@^2.70.2:
   version "2.75.3"
   resolved "https://registry.npmmirror.com/rollup/-/rollup-2.75.3.tgz#11bd3e8ace526911feea8af17f2a286fbfdb4cf8"
   integrity sha512-YA29fLU6MAYSaDxIQYrGGOcbXlDmG96h0krGGYObroezcQ0KgEPM3+7MtKD/qeuUbFuAJXvKZee5dA1dpwq1PQ==
-  optionalDependencies:
-    fsevents "~2.3.2"
-
-rollup@^2.59.0:
-  version "2.75.0"
-  resolved "https://registry.npmmirror.com/rollup/-/rollup-2.75.0.tgz#c4c1c2bf46c706823f5f0eee046c7a1cbdda5038"
-  integrity sha512-1/wxtweHJ7YwI2AIK3ZgCBU3nbW8sLnBIFwN46cwOTnVzt8f1o6J8zPKjwoiuADvzSjmnLqJce31p0q2vQ+dqw==
   optionalDependencies:
     fsevents "~2.3.2"
 
@@ -13557,22 +13550,10 @@ vite-plugin-vuetify@^1.0.0-alpha.0:
     "@vuetify/loader-shared" "^1.4.0"
     debug "^4.3.3"
 
-vite@^2.9.10:
-  version "2.9.10"
-  resolved "https://registry.npmmirror.com/vite/-/vite-2.9.10.tgz#f574d96655622c2e0fbc662edd0ed199c60fe91a"
-  integrity sha512-TwZRuSMYjpTurLqXspct+HZE7ONiW9d+wSWgvADGxhDPPyoIcNywY+RX4ng+QpK30DCa1l/oZgi2PLZDibhzbQ==
-  dependencies:
-    esbuild "^0.14.27"
-    postcss "^8.4.13"
-    resolve "^1.22.0"
-    rollup "^2.59.0"
-  optionalDependencies:
-    fsevents "~2.3.2"
-
-vite@^2.9.7:
-  version "2.9.9"
-  resolved "https://registry.npmmirror.com/vite/-/vite-2.9.9.tgz#8b558987db5e60fedec2f4b003b73164cb081c5e"
-  integrity sha512-ffaam+NgHfbEmfw/Vuh6BHKKlI/XIAhxE5QSS7gFLIngxg171mg1P3a4LSRME0z2ZU1ScxoKzphkipcYwSD5Ew==
+vite@^2.9.10, vite@^2.9.7:
+  version "2.9.12"
+  resolved "https://registry.yarnpkg.com/vite/-/vite-2.9.12.tgz#b1d636b0a8ac636afe9d83e3792d4895509a941b"
+  integrity sha512-suxC36dQo9Rq1qMB2qiRorNJtJAdxguu5TMvBHOc/F370KvqAe9t48vYp+/TbPKRNrMh/J55tOUmkuIqstZaew==
   dependencies:
     esbuild "^0.14.27"
     postcss "^8.4.13"
