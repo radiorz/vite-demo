@@ -1939,20 +1939,20 @@
   dependencies:
     ajv "^6.10.2"
 
-"@lljj/vue3-form-core@1.13.0":
-  version "1.13.0"
-  resolved "https://registry.npmmirror.com/@lljj/vue3-form-core/-/vue3-form-core-1.13.0.tgz#05c5c24bb70998a160ef8360cb4d2e8a2b8db1c6"
-  integrity sha512-uZZ6mD/mNyNLt3RktcI6/EQOUn2oKFbIafMNKFFv2biT63pjEZSjoZPoPLVqa0zoL1M03uM4/VXDL1IxjklxXA==
+"@lljj/vue3-form-core@1.13.1":
+  version "1.13.1"
+  resolved "https://registry.yarnpkg.com/@lljj/vue3-form-core/-/vue3-form-core-1.13.1.tgz#2dca69fd8c89e6bda5b37be0e39a694b2470e447"
+  integrity sha512-kFHe6QSjtIklvlkCRyxB4xcWxKRW+av9GeBX3bliogk7uFaujpf0LAWXX+7zhsxm2OlXVoVriyZiqNp7OGi+Vw==
   dependencies:
     "@lljj/vjsf-utils" "1.12.2"
 
 "@lljj/vue3-form-element@^1.13.0":
-  version "1.13.0"
-  resolved "https://registry.npmmirror.com/@lljj/vue3-form-element/-/vue3-form-element-1.13.0.tgz#913a4caa9ff0ebc82d85430c69d9626855f3e3b2"
-  integrity sha512-S2mop4BFyKySXNPBisAwUN2OfKlqDAtJthbH931lXEuRs9AQ/FetbexFbpNMX/kK0P6o7EPV2cDoeDO89gaXLg==
+  version "1.13.1"
+  resolved "https://registry.yarnpkg.com/@lljj/vue3-form-element/-/vue3-form-element-1.13.1.tgz#51c1759f0f7ab9d49b041e0ccc6b5147ae04167b"
+  integrity sha512-SNTPwP271jE9pmACQ6HIOzQVOGUUDfWN5S4pcLjwCj33h5caRqkWnCn7T8yOcxOpbFs96mfRHZVg2DBmPZZeOg==
   dependencies:
     "@lljj/vjsf-utils" "1.12.2"
-    "@lljj/vue3-form-core" "1.13.0"
+    "@lljj/vue3-form-core" "1.13.1"
 
 "@mdi/font@5.9.55":
   version "5.9.55"
