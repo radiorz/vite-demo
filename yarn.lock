@@ -1094,9 +1094,9 @@
   integrity sha512-H9XAx3hc0BQHY6l+IFSWHDySypcXsvsuLhgYLUGywmJ5pswRVQJUHpOsobnLYp2ZUaUlKiKDrgWWhosOwAEM8Q==
 
 "@iconify/json@^2.1.57":
-  version "2.1.59"
-  resolved "https://registry.yarnpkg.com/@iconify/json/-/json-2.1.59.tgz#4b352af1c1a5a07f31eb53ea74a579e83718ae1d"
-  integrity sha512-5tr6Fr9LAv+6WGVmsCn5tJlRi+tRy+roS8vSGxqIcCTL96S9tTKApK1PIkj+Rh2BSts+fzkxxp57+Q4O4Bd68Q==
+  version "2.1.64"
+  resolved "https://registry.yarnpkg.com/@iconify/json/-/json-2.1.64.tgz#d22a73ead859ff2b59a6da922a146b1bf4402e52"
+  integrity sha512-OtiVmLCxdBcB9ZVGXjTyRDeqcVykOqNSlUpm6KA+dZ1ZbEy3s1gHruv70OlMogoG3x40/AIZ48/9JPyJWUrt4A==
   dependencies:
     "@iconify/types" "^1.1.0"
     pathe "^0.2.0"
@@ -3114,10 +3114,10 @@
     "@types/webpack-dev-server" "^3"
     webpack-chain "^6.0.0"
 
-"@vuetify/loader-shared@^1.4.0":
-  version "1.4.0"
-  resolved "https://registry.npmmirror.com/@vuetify/loader-shared/-/loader-shared-1.4.0.tgz#b993665d126660355924bd4f6d2c176f9bf1e738"
-  integrity sha512-aBlBuDC40tRRLFXXeOMB2mQiIOI4GTaezxv4RjLE4NzC3g2QIQH6yc51E7vWHHp621Ys4vaU3Yo+HdO5lbfJ9g==
+"@vuetify/loader-shared@^1.5.0":
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/@vuetify/loader-shared/-/loader-shared-1.5.0.tgz#2bdfa49497f49a37993064b30fcb3d6f96c7fb0c"
+  integrity sha512-Sc+CUZGtQfMLmXXdZ3fvYWkDwMm5zYvYgsAPWsvXNokCeE7WhNA/IETFMThfF8Nf9mnf+zX9+jdtVhKND3hBkQ==
   dependencies:
     find-cache-dir "^3.3.2"
     upath "^2.0.1"
@@ -13426,11 +13426,11 @@ vite-plugin-theme@^0.8.6:
     tinycolor2 "^1.4.2"
 
 vite-plugin-vuetify@^1.0.0-alpha.0:
-  version "1.0.0-alpha.11"
-  resolved "https://registry.npmmirror.com/vite-plugin-vuetify/-/vite-plugin-vuetify-1.0.0-alpha.11.tgz#7df951f0a65b8d73b0f3b66b917f99a20e3eb6de"
-  integrity sha512-YqnirQhGfG1skj1Z41DVh0WqSjoJ/BtcfZvnGVkcBrfRe+pFg4lHV2mI3K5LdjCeBxzHqofxlz6J6ciyRvrqcA==
+  version "1.0.0-alpha.12"
+  resolved "https://registry.yarnpkg.com/vite-plugin-vuetify/-/vite-plugin-vuetify-1.0.0-alpha.12.tgz#ee8b6816e6fb66c9c9010d574ecd79b18795d064"
+  integrity sha512-DMb7oY6F67P1RTEU28xQePUnyZdm+sbeGgIF3exBrA5yLL8NKKPIahqJN4+MAWMXCJVwNKy7nsS6zVgOLtcoQg==
   dependencies:
-    "@vuetify/loader-shared" "^1.4.0"
+    "@vuetify/loader-shared" "^1.5.0"
     debug "^4.3.3"
 
 vite@^2.9.10, vite@^2.9.7:
