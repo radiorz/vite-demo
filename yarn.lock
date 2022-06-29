@@ -1057,17 +1057,17 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
-"@floating-ui/core@^0.7.2":
-  version "0.7.2"
-  resolved "https://registry.yarnpkg.com/@floating-ui/core/-/core-0.7.2.tgz#f7af9613d080dc29360e77c970965b79b524d45a"
-  integrity sha512-FRVAkSNU/vGXLIsgbggcs70GkXKEOXgBBbNpYPNHSaKsCAMMd00NrjbtKTesxkdv9xm9N3+XiDlcFGY6WnatBg==
+"@floating-ui/core@^0.7.3":
+  version "0.7.3"
+  resolved "https://registry.yarnpkg.com/@floating-ui/core/-/core-0.7.3.tgz#d274116678ffae87f6b60e90f88cc4083eefab86"
+  integrity sha512-buc8BXHmG9l82+OQXOFU3Kr2XQx9ys01U/Q9HMIrZ300iLc8HLMgh7dcCqgYzAzf4BkoQvDcXf5Y+CuEZ5JBYg==
 
-"@floating-ui/dom@^0.5.2":
-  version "0.5.2"
-  resolved "https://registry.yarnpkg.com/@floating-ui/dom/-/dom-0.5.2.tgz#908f3febbfc0d6696d70921616ec194fe07af183"
-  integrity sha512-z1DnEa7F3d8Fm/eXSbii8UEGpcjZGkQaYYUI0WpEVgD3vBfebDW8j/3ysusxonuMexoigA+A3b/fYH7sEqiwyg==
+"@floating-ui/dom@^0.5.3":
+  version "0.5.3"
+  resolved "https://registry.yarnpkg.com/@floating-ui/dom/-/dom-0.5.3.tgz#ade192cf9a911fc3e95fb614fe281658b654043c"
+  integrity sha512-vpjWB1uC7rajvgA58uzlJZgtWqrdDQLw+XVA3w63ZTmsWwRmVd0Gl5Dy9VMAViI9cP7hBWaJt23Jy3AVgVYnoQ==
   dependencies:
-    "@floating-ui/core" "^0.7.2"
+    "@floating-ui/core" "^0.7.3"
 
 "@gar/promisify@^1.0.1", "@gar/promisify@^1.1.3":
   version "1.1.3"
@@ -1953,10 +1953,10 @@
     "@lljj/vjsf-utils" "1.12.2"
     "@lljj/vue3-form-core" "1.13.1"
 
-"@mdi/font@5.9.55":
-  version "5.9.55"
-  resolved "https://registry.npmmirror.com/@mdi/font/-/font-5.9.55.tgz#41acd50b88073ded7095fc3029d8712b6e12f38e"
-  integrity sha512-jswRF6q3eq8NWpWiqct6q+6Fg/I7nUhrxYJfiEM8JJpap0wVJLQdbKtyS65GdlK7S7Ytnx3TTi/bmw+tBhkGmg==
+"@mdi/font@6.8.96":
+  version "6.8.96"
+  resolved "https://registry.yarnpkg.com/@mdi/font/-/font-6.8.96.tgz#e8e2f2eebdaec769c2c41cde6912d1066f81df78"
+  integrity sha512-SXNgfE9BdaaKZOJjb9vDhXbJOWJD8Zjqjf352dcFzOkPnBR9piVAvIH7ZtG08B2DI1l4swe7m9F2aPGmH1X20g==
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
@@ -5766,13 +5766,13 @@ electron-to-chromium@^1.4.118:
   integrity sha512-mfBcbqc0qc6RlxrsIgLG2wCqkiPAjEezHxGTu7p3dHHFOurH4EjS9rFZndX5axC8264rI1Pcbw8uQP39oZckeA==
 
 element-plus@^2.2.0, element-plus@^2.2.4:
-  version "2.2.5"
-  resolved "https://registry.yarnpkg.com/element-plus/-/element-plus-2.2.5.tgz#2bb889660c9bcb9bb71e18619915b35e0f48d569"
-  integrity sha512-Kl0yn/PQca5YQo3M3NPBP4Xl71NQuMtDx5zNXZGVyl5FjdMujXiFB9SXKYGDUCgFU3d/Rl14vB4Fpmcl2Iz+Hw==
+  version "2.2.6"
+  resolved "https://registry.yarnpkg.com/element-plus/-/element-plus-2.2.6.tgz#60b9e91a2159526123d1b950263de37947153433"
+  integrity sha512-N9G4yWSxDt1YtreCJgt7UaSsXKuR4Fzb3ThzlBjbGDYDhcHijsrLL3qkdLZgeoSB13LRyr9pgP1ljNXdaYGa+g==
   dependencies:
     "@ctrl/tinycolor" "^3.4.1"
     "@element-plus/icons-vue" "^2.0.5"
-    "@floating-ui/dom" "^0.5.2"
+    "@floating-ui/dom" "^0.5.3"
     "@popperjs/core" "npm:@sxzz/popperjs-es@^2.11.7"
     "@types/lodash" "^4.14.182"
     "@types/lodash-es" "^4.17.6"
