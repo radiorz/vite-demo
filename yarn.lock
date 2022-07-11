@@ -1094,9 +1094,9 @@
   integrity sha512-H9XAx3hc0BQHY6l+IFSWHDySypcXsvsuLhgYLUGywmJ5pswRVQJUHpOsobnLYp2ZUaUlKiKDrgWWhosOwAEM8Q==
 
 "@iconify/json@^2.1.57":
-  version "2.1.68"
-  resolved "https://registry.yarnpkg.com/@iconify/json/-/json-2.1.68.tgz#9de19c2aada92de77e407334bedcad7eac7874be"
-  integrity sha512-OlnC9xhqRcnCwDutY1ZGkNpK2QvxCZfBkn+yZaNQ2wYuhuPQWPlr4RdEvZUA7Yle1IDrBqq+2SVOVbAPCIsupQ==
+  version "2.1.74"
+  resolved "https://registry.yarnpkg.com/@iconify/json/-/json-2.1.74.tgz#f28a0f98348942fcf1bbbd1324488888dd246474"
+  integrity sha512-seqSL3IWw6e6Qy31GxZy479S1AyDSepv1kVU9yZlrsW5qn+iRlguS7Rl8Hl++Pb+RcnAAC930EHaxkI7GVPzKA==
   dependencies:
     "@iconify/types" "*"
     pathe "^0.3.0"
@@ -6271,9 +6271,9 @@ eslint-plugin-prettier@^4.0.0:
     prettier-linter-helpers "^1.0.0"
 
 eslint-plugin-react-hooks@^4.5.0:
-  version "4.5.0"
-  resolved "https://registry.npmmirror.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-4.5.0.tgz#5f762dfedf8b2cf431c689f533c9d3fa5dcf25ad"
-  integrity sha512-8k1gRt7D7h03kd+SAAlzXkQwWK22BnK6GKZG+FJA6BAGy22CFvl8kCIXKpVux0cCxMWDQUPqSok0LKaZ0aOcCw==
+  version "4.6.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-4.6.0.tgz#4c3e697ad95b77e93f8646aaa1630c1ba607edd3"
+  integrity sha512-oFc7Itz9Qxh2x4gNHStv3BqJq54ExXmfC+a1NjAta66IAN87Wu0R/QArgIS9qKzX3dXKPI9H5crl9QchNMY9+g==
 
 eslint-plugin-vue@^9.1.0:
   version "9.1.0"
@@ -10351,12 +10351,7 @@ path-type@^4.0.0:
   resolved "https://registry.npmmirror.com/path-type/-/path-type-4.0.0.tgz#84ed01c0a7ba380afe09d90a8c180dcd9d03043b"
   integrity sha512-gDKb8aZMDeD/tZWs9P6+q0J9Mwkdl6xMV8TjnGP3qJVJ06bdMgkbBlLU8IdfOsIsFz2BW1rNVT3XuNEl8zPAvw==
 
-pathe@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.npmmirror.com/pathe/-/pathe-0.3.0.tgz#fd95bc16208263fa6dc1c78c07b3907a528de6eb"
-  integrity sha512-3vUjp552BJzCw9vqKsO5sttHkbYqqsZtH0x1PNtItgqx8BXEXzoY1SYRKcL6BTyVh4lGJGLj0tM42elUDMvcYA==
-
-pathe@^0.3.1:
+pathe@^0.3.0, pathe@^0.3.1:
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/pathe/-/pathe-0.3.1.tgz#e0e47bc0e8a1775fd001e2fdbf67d7f649a4a4f4"
   integrity sha512-cKMVe/pikPpreoODbjoliSk0cIT66JjEOWN30akc9WTo8kUjxFPYqmXvMBVPMSAJGJlx6v/nYzqSSHkp1cfezQ==
