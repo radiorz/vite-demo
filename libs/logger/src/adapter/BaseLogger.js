@@ -1,5 +1,16 @@
 import { LOG_LEVELS } from "~/utils/constants";
 export default class BaseLogger {
+  _withTags = new WeekWap();
+  // 切换前置用
+  withTag(tag = "") {
+    let _tag = tag;
+    if (isFunction(tag)) {
+      _tag = tag.name;
+    }
+    const proxy = new Proxy(this, {});
+    this._withTags.set(proxy, _tag);
+    return proxy;
+  }
   constructor(level) {
     this._level = level;
   }

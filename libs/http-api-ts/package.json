@@ -1,26 +1,28 @@
 {
-  "name": "@tikkhun/logger",
+  "name": "@tikkhun/http-api",
   "version": "1.0.6",
-  "description": "日志打印,致敬少聪日志",
+  "description": "简易的 axios 封装使用",
   "scripts": {
     "build": "vite build",
     "ncu": "ncu -u",
     "publish": "npm publish --registry=http://localhost:4873"
   },
-  "main": "./dist/logger.umd.js",
-  "module": "./dist/logger.es.js",
+  "main": "./dist/http-api.umd.js",
+  "module": "./dist/http-api.es.js",
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/logger.es.js",
-      "require": "./dist/logger.umd.js"
+      "import": "./dist/http-api.es.js",
+      "require": "./dist/http-api.umd.js"
     }
   },
   "keywords": [],
   "author": "tikkhun",
   "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2"
+  },
   "devDependencies": {
-    "vite": "^3.0.2",
-    "jest": "^28.1.1"
+    "vite": "^3.0.2"
   }
 }
