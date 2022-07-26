@@ -3888,10 +3888,10 @@
     "@types/webpack-dev-server" "^3"
     webpack-chain "^6.0.0"
 
-"@vuetify/loader-shared@^1.4.0":
-  version "1.4.0"
-  resolved "https://registry.npmmirror.com/@vuetify/loader-shared/-/loader-shared-1.4.0.tgz#b993665d126660355924bd4f6d2c176f9bf1e738"
-  integrity sha512-aBlBuDC40tRRLFXXeOMB2mQiIOI4GTaezxv4RjLE4NzC3g2QIQH6yc51E7vWHHp621Ys4vaU3Yo+HdO5lbfJ9g==
+"@vuetify/loader-shared@^1.5.1":
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/@vuetify/loader-shared/-/loader-shared-1.5.1.tgz#462057d6191f4e9a1d1877858186616b07ca8e3f"
+  integrity sha512-3Y1+v1DAi+kr2XRnTo5/o+SRPqrfBV0X0HoGtUUS2BVHKwXoj7cxOBE4zg6rWw7x+mBzDbgcum0zOj9HMx+LJQ==
   dependencies:
     find-cache-dir "^3.3.2"
     upath "^2.0.1"
@@ -7417,6 +7417,19 @@ eslint-plugin-vue@^8.7.1:
     postcss-selector-parser "^6.0.9"
     semver "^7.3.5"
     vue-eslint-parser "^8.0.1"
+
+eslint-plugin-vue@^9.1.0:
+  version "9.3.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-vue/-/eslint-plugin-vue-9.3.0.tgz#c3f5ce515dae387e062428725c5cf96098d9da0b"
+  integrity sha512-iscKKkBZgm6fGZwFt6poRoWC0Wy2dQOlwUPW++CiPoQiw1enctV2Hj5DBzzjJZfyqs+FAXhgzL4q0Ww03AgSmQ==
+  dependencies:
+    eslint-utils "^3.0.0"
+    natural-compare "^1.4.0"
+    nth-check "^2.0.1"
+    postcss-selector-parser "^6.0.9"
+    semver "^7.3.5"
+    vue-eslint-parser "^9.0.1"
+    xml-name-validator "^4.0.0"
 
 eslint-plugin-vue@^9.2.0:
   version "9.2.0"
@@ -15801,12 +15814,13 @@ vite-plugin-pwa@^0.12.3:
     workbox-window "^6.5.3"
 
 vite-plugin-vuetify@^1.0.0-alpha.0:
-  version "1.0.0-alpha.11"
-  resolved "https://registry.npmmirror.com/vite-plugin-vuetify/-/vite-plugin-vuetify-1.0.0-alpha.11.tgz#7df951f0a65b8d73b0f3b66b917f99a20e3eb6de"
-  integrity sha512-YqnirQhGfG1skj1Z41DVh0WqSjoJ/BtcfZvnGVkcBrfRe+pFg4lHV2mI3K5LdjCeBxzHqofxlz6J6ciyRvrqcA==
+  version "1.0.0-alpha.14"
+  resolved "https://registry.yarnpkg.com/vite-plugin-vuetify/-/vite-plugin-vuetify-1.0.0-alpha.14.tgz#5dc71f23daa3f84b7ea48f37d67e16a1f1f3e6f3"
+  integrity sha512-hYcxkj5iq9Ecgeddklowf6tvhik9TsVofvR3PisWZJT/eSSL36BUCFulg1vo2DQHJGC/SEaLOWzgRwDbkmwRyA==
   dependencies:
-    "@vuetify/loader-shared" "^1.4.0"
+    "@vuetify/loader-shared" "^1.5.1"
     debug "^4.3.3"
+    upath "^2.0.1"
 
 vite@^3.0.2:
   version "3.0.2"
@@ -15944,7 +15958,7 @@ vue-tsc@^0.36.1:
   dependencies:
     "@volar/vue-typescript" "0.36.1"
 
-vue-tsc@^0.38.9:
+vue-tsc@^0.38.1, vue-tsc@^0.38.9:
   version "0.38.9"
   resolved "https://registry.npmmirror.com/vue-tsc/-/vue-tsc-0.38.9.tgz#9e945937667f704325328db8af1cc6bc7314b85e"
   integrity sha512-Yoy5phgvGqyF98Fb4mYqboR4Q149jrdcGv5kSmufXJUq++RZJ2iMVG0g6zl+v3t4ORVWkQmRpsV4x2szufZ0LQ==
