@@ -11,7 +11,7 @@
     "@iconify/json": "^2.1.80",
     "@lljj/vue3-form-element": "^1.13.1",
     "@vueuse/components": "^8.9.4",
-    "@vueuse/core": "^8.9.4",
+    "@vueuse/core": "^9.0.0",
     "element-plus": "^2.2.9",
     "nanoid": "^4.0.0",
     "nprogress": "^0.2.0",
