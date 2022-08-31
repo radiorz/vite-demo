@@ -5,14 +5,10 @@
 * [] 
 -->
 
-<script setup>
-
-</script>
+<script setup></script>
 
 <template>
-  <div class="about">
-    this is about page
-  </div>
+  <div class="about">this is about page</div>
 </template>
 
 <style></style>

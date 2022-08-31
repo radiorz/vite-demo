@@ -1,5 +1,5 @@
 import "~/plugins/globalInject";
-import appInject from "~/plugins/appInject";
+import useInject from "~/plugins/appInject";
 import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router";
@@ -19,7 +19,7 @@ import { OverlayScrollbarsComponent } from "overlayscrollbars-vue";
 
 useRegisterSW();
 const app = createApp(App);
-appInject(app);
+useInject(app);
 app.component("OverlayScrollbars", OverlayScrollbarsComponent);
 app.use(i18n);
 app.use(createPinia());

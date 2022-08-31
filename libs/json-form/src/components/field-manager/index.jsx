@@ -1,4 +1,4 @@
-import { defineComponent, defineAsyncComponent, computed } from "vue";
+import { defineComponent, defineAsyncComponent } from "vue";
 export default defineComponent({
   name: "field-manager",
   components: {},
@@ -7,20 +7,21 @@ export default defineComponent({
       type: Object,
       default: () => ({}),
     },
-    data: {
+    modelValue: {
       type: [Object, String],
     },
   },
   computed: {},
-  setup({ schema, data }) {
-    let { widget } = schema;
+  setup(props, { emit }) {
+    const { schema, modelValue } = toRef(props);
+    let { widget } = schema.value;
     if (!widget) widget = "text-field";
     // 设置 data基础值
-    if (!data) {
+    if (!modelValue.value) {
       if (schema?.type === "object") {
-        data = reactive({});
+        modelValue.value = {};
       } else if (schema?.type === "string") {
-        data = "";
+        modelValue.value = "123";
       }
     }
     const widgets = import.meta.glob("../widget/*.vue");
@@ -28,17 +29,20 @@ export default defineComponent({
     const asyncFieldComponent = defineAsyncComponent(
       widgets[`../widget/${widget}.vue`]
     );
-
+    const onInput = (e) => {
+      console.log("onInput", e.target.value);
+      emit("update:modelValue", e.target.value);
+    };
     return () => (
       <>
-        {data}
+        {modelValue.value}
         {schema?.type === "object" ? (
           Object.entries(schema.properties).map(([key, value]) => {
             return (
               <>
-                <>{data}</>
+                <>{modelValue}</>
                 <field-manager
-                  v-model={data[key]}
+                  v-model={modelValue.value[key]}
                   schema={{ ...value, name: key }}
                 ></field-manager>
               </>
@@ -49,8 +53,9 @@ export default defineComponent({
         ) : (
           <>
             <label htmlFor="">{schema?.name}</label>
-            {typeof data}
-            <input value={data} onInput={(e) => data === e.target.value} />
+            {typeof modelValue.value}
+            {modelValue.value}
+            <input value={modelValue.value} onInput={onInput} />
           </>
         )}
       </>

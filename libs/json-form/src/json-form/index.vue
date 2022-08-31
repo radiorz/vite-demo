@@ -22,7 +22,8 @@ const props = defineProps({
 <template>
   <div class="json-form">
     <field-manager v-model="data" :schema="schema"></field-manager>
-    {{ props.uiSchema }}
+    props.uiSchema {{ props.uiSchema }}
+    props.data= {{ props.data }}
   </div>
 </template>
 
