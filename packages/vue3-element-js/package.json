@@ -32,7 +32,7 @@
     "@iconify/json": "^2.1.80",
     "@intlify/vite-plugin-vue-i18n": "^5.0.0",
     "@types/js-cookie": "^3.0.2",
-    "@types/node": "18.0.6",
+    "@types/node": "18.7.18",
     "@types/nprogress": "^0.2.0",
     "@types/overlayscrollbars": "^1.12.1",
     "@vitejs/plugin-legacy": "^2.0.0",
