@@ -30,7 +30,7 @@
   "license": "ISC",
   "devDependencies": {
     "@iconify/json": "^2.1.80",
-    "@intlify/vite-plugin-vue-i18n": "^5.0.0",
+    "@intlify/vite-plugin-vue-i18n": "^6.0.3",
     "@types/js-cookie": "^3.0.2",
     "@types/node": "18.0.6",
     "@types/nprogress": "^0.2.0",
