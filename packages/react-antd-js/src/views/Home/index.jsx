@@ -1,26 +1,27 @@
 import { useEffect, useState } from "react";
 import Progress from "../../components/Progress";
 function Home() {
-  const [progress, setProgress] = useState(0);
-  const [isLoaded, setIsLoaded] = useState(false);
-  // useEffect(() => {
-  //   (async () => {
-  //     if (isLoaded)
-  //       // 初始化
-  //       await initDevice();
-  //     setProgress(10);
-  //     setInterval(() => {
-  //       setProgress(progress + 10);
-  //       console.log(`progress`, progress);
-  //     }, 1000);
-  //   })();
-  //   return () => {};
-  // }, [progress]);
+  const [count, setCount] = useState(0);
+  const [count1, setCount1] = useState(0);
+  useEffect(() => {
+    console.log(`count`, count);
+  }, [count]);
   return (
     <div>
-      <div>Home</div>
-
-      <Progress />
+      <button
+        onClick={() => {
+          setCount((count) => 1 + count);
+        }}
+      >
+        {count}
+      </button>
+      <button
+        onClick={() => {
+          setCount1((count1) => 1 + count1);
+        }}
+      >
+        {count1}
+      </button>
     </div>
   );
 }

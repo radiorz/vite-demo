@@ -1,51 +1,15 @@
 <template>
-  <v-container>
-    <v-row
-      class="login-row"
-      align="center"
-      justify="center"
-    >
-      <v-col
-        cols="12"
-        sm="6"
-        md="4"
-        lg="3"
-      >
-        <!-- 登录卡片 -->
-        <v-card class="elevation-12">
-          <v-toolbar
-            color="dark"
-            dark
-            flat
-          >
-            <v-spacer />
-            <v-toolbar-title class="card-title">
-              许可管理系统
-            </v-toolbar-title>
-            <v-spacer />
-          </v-toolbar>
-          <!-- <v-responsive :aspect-ratio="16 / 9"> -->
-          <v-card-text>
-            <v-form
-              ref="form"
-            >
-              <v-text-field
-                solo
-                class="mx-2"
-                name="username"
-                label="用户名"
-              />
-           
-              <!-- TODO 保存密码 -->
-              <!-- 登录按钮 -->
-              <v-card-actions />
-            </v-form>
-          </v-card-text>
-          <!-- </v-responsive> -->
-        </v-card>
-      </v-col>
-    </v-row>
-  </v-container>
+  <div>
+    <div v-if="aaa ? delay() &&b : true">
+      123123123
+    </div>
+    <div v-if="aaa ? delay() : true">
+      33333
+    </div>
+    <button @click="changeAAA">
+      bbbbb
+    </button>
+  </div>
 </template>
 
 <script lang="ts">
@@ -59,6 +23,8 @@ export default defineComponent({
 
   data() {
     return {
+      b: true,
+      aaa: false,
       ecosystem: [
         {
           text: "vuetify-loader",
@@ -107,6 +73,18 @@ export default defineComponent({
         },
       ],
     };
+  },
+  methods: {
+    changeAAA() {
+      this.aaa = true;
+      // this.delay();
+    },
+    async delay() {
+      await new Promise((resolve) => setTimeout(resolve, 5000));
+      console.log(`123`, 123);
+      this.b = false;
+      return false;
+    },
   },
 });
 </script>
