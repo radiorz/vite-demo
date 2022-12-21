@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Progress from "../../components/Progress";
+// TODO 这个页面会渲染两次(或许是路由的锅)
 function Home() {
   const [count, setCount] = useState(0);
   const [count1, setCount1] = useState(0);

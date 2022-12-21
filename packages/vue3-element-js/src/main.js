@@ -10,7 +10,7 @@ import { useRegisterSW } from "virtual:pwa-register/vue";
 
 // import "~/style/main.css"; // global css
 import "~/style/index.scss"; // global css
-import "overlayscrollbars/css/OverlayScrollbars.css";
+import "overlayscrollbars/overlayscrollbars.css";
 import { OverlayScrollbarsComponent } from "overlayscrollbars-vue";
 
 

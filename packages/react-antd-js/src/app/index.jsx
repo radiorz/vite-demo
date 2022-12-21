@@ -45,7 +45,8 @@ function App() {
           <Route exact path="/" element={<Home />} />
           {/* 更多路由 */}
           <Route path="/about" element={<About />} />
-          <Route path="/404" element={<NotFound></NotFound>} />
+          {/* 404 */}
+          <Route path="*" element={<NotFound></NotFound>} />
           {/* TODO 嵌套式的路由 */}
           {/* <Route path="/nest" element={<NestLayout i={1} />}>
             <Route path="nest1" element={<div>121121212121</div>} />
