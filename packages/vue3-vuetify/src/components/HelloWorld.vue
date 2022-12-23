@@ -1,13 +1,17 @@
 <template>
   <div>
-    <div v-if="aaa ? delay() &&b : true">
+    <div v-if="aaa ? delay() && b : true">
       123123123
     </div>
-    <div v-if="aaa ? delay() : true">
-      33333
+    <div
+      v-if="aaa ? delay() : true"
+      @click="onDivClick"
+    >
+      非 button 点击
     </div>
+    <v-btn>v-button</v-btn>
     <button @click="changeAAA">
-      bbbbb
+      button
     </button>
   </div>
 </template>
@@ -75,6 +79,9 @@ export default defineComponent({
     };
   },
   methods: {
+    onDivClick() {
+      console.log(`123123123`, 123123123);
+    },
     changeAAA() {
       this.aaa = true;
       // this.delay();
