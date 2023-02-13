@@ -46,7 +46,7 @@
     "prettier": "^2.8.1",
     "prettier-plugin-tailwindcss": "^0.2.1",
     "tailwindcss": "^3.2.4",
-    "unplugin-auto-import": "^0.12.1",
+    "unplugin-auto-import": "^0.14.2",
     "unplugin-icons": "^0.14.15",
     "unplugin-vue-components": "^0.22.12",
     "vite": "^4.0.2",
