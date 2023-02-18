@@ -9,10 +9,12 @@ export default defineConfig({
   },
   build: {
     lib: {
-      entry: resolve("src/index.js"),
+      entry: resolve("src/index.ts"),
       // 库暴露的全局变量
-      name: "logger",
-
+      name: "simpleLogger",
+    },
+    rollupOptions:{
+      external:['fs']
     },
   },
 });
