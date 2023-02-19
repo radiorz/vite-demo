@@ -37,7 +37,7 @@ export default () => {
       open: true,
       // network 可以访问 不只是 localhost
       host: "0.0.0.0",
-      port: 5000,
+      port: 8888,
       // 设置https 代理
       proxy: {
         "/api": {

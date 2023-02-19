@@ -4,3 +4,5 @@ export enum LEVELS {
   info,
   debug,
 }
+
+// console.log(`LEVELS`, LEVELS);

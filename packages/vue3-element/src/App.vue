@@ -1,10 +1,13 @@
 <script setup lang="ts">
 import JsonForm from "@tikkhun/json-form";
+// import Home from "~/views/Home/index.vue";
+import logger from "@tikkhun/logger";
+logger.debug("123");
 </script>
 
 <template>
   <div>
-    123
+    <!-- <Home /> -->
     <JsonForm />
   </div>
 </template>

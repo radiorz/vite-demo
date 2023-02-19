@@ -1,8 +1,7 @@
-import { useLogger, LOG_LEVELS } from "@tikkhun/logger";
-export default useLogger;
+import logger, { LEVELS } from "@tikkhun/logger";
 // 定制前缀
-export const logger = useLogger("vue3-element-js", {
-  level:
-    process.env.NODE_ENV === "production" ? LOG_LEVELS.INFO : LOG_LEVELS.DEBUG,
-});
-logger.debug("logger start");
+const _logger = logger
+  .setName("vue3-element-js")
+  .setLevel(process.env.NODE_ENV === "production" ? LEVELS.info : LEVELS.debug);
+_logger.debug("logger start");
+export default _logger;

@@ -7,11 +7,11 @@
     "ncu": "ncu -u"
   },
   "main": "./dist/logger.umd.js",
-  "module": "./dist/logger.es.js",
+  "module": "./dist/logger.mjs",
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/logger.es.js",
+      "import": "./dist/logger.mjs",
       "require": "./dist/logger.umd.js"
     }
   },
@@ -21,5 +21,10 @@
   "devDependencies": {
     "vite": "^4.1.2",
     "vite-plugin-dts": "^2.0.0-beta.1"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "typescript": "^4.9.5",
+    "vitest": "^0.28.5"
   }
 }

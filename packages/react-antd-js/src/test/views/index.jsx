@@ -1,4 +1,4 @@
-import {logger,useLogger} from "@tikkhun/logger";
+import logger from "@tikkhun/logger";
 function Test() {
   logger.debug("test");
   return <div>test</div>;

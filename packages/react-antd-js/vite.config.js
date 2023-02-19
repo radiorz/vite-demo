@@ -5,7 +5,7 @@ import Pages from "./config/vitePluginPages";
 export default defineConfig({
   plugins: [react(), Pages()],
   server: {
-    port: 5000,
+    port: 1314,
   },
   resolve: {
     alias: {

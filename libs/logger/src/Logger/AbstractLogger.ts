@@ -1,13 +1,32 @@
-type OriginMessage = string | string[];
-import ILogger from "./Interface";
+import { isString } from "lodash";
 import { LEVELS } from "../consts";
+import ILogger from "../ILogger";
 const toMessageArray = (message: string | string[]) => {
   return typeof message === "string" ? [message] : message;
 };
 export default abstract class AbstractLogger implements ILogger {
   level: LEVELS | null = LEVELS.debug;
-  constructor(public name: string = "") {}
-
+  constructor(public name: string = "") {
+    // FIXME 这里不被认可...
+    // for (const level in LEVELS) {
+    //   const levelName = LEVELS[level];
+    //   console.log(`levelName`, levelName);
+    //   // 这里 implements 不好
+    //   const func = function (...messages: any[]) {
+    //     if (!this.isLevelAllow(LEVELS[level])) {
+    //       return;
+    //     }
+    //     this[`_${level}`](toMessageArray(this.messageParser(messages)));
+    //   };
+    //   this[levelName] = func.bind(this);
+    // }
+  }
+  // abstract _messageParser:string;
+  // 创建者模式
+  setName(name: string) {
+    this.name = name;
+    return this;
+  }
   setLevel(level: LEVELS | null) {
     this.level = level || null;
     return this;
@@ -45,31 +64,32 @@ export default abstract class AbstractLogger implements ILogger {
   abstract _warn(message: string[]): void;
   abstract _error(message: string[]): void;
 
-  debug(message: OriginMessage) {
+  debug(...messages: any[]) {
     if (!this.isLevelAllow(LEVELS.debug)) {
       return;
     }
-    this._debug(toMessageArray(message));
+    this._debug(toMessageArray(this.messageParser(messages)));
   }
-  info(message: OriginMessage) {
+  info(...messages: any[]) {
     if (!this.isLevelAllow(LEVELS.info)) {
       return;
     }
-    this._info(toMessageArray(message));
+    this._info(toMessageArray(this.messageParser(messages)));
   }
-  warn(message: OriginMessage) {
+  warn(...messages: any[]) {
     if (!this.isLevelAllow(LEVELS.warn)) {
       return;
     }
-    this._info(toMessageArray(message));
+    this._warn(toMessageArray(this.messageParser(messages)));
   }
-  error(message: OriginMessage) {
-    if (!this.isLevelAllow(LEVELS.warn)) {
+  error(...messages: any[]) {
+    if (!this.isLevelAllow(LEVELS.error)) {
       return;
     }
-    this._info(toMessageArray(message));
+    this._error(toMessageArray(this.messageParser(messages)));
   }
-  // 快速创建一个新的logger库 只有 tag不同
+  // ****** tag ******
+  // 快速创建一个新的logger库 只有 tag 不同
   private static tags = new WeakMap<object, string>();
   get tag() {
     return AbstractLogger.tags.get(this);
@@ -83,6 +103,45 @@ export default abstract class AbstractLogger implements ILogger {
     const proxy = new Proxy(this, {});
     AbstractLogger.tags.set(proxy, tag);
     return proxy;
+  }
+  // messageParser
+  // @override
+  // 默认就是将所有的message 转成字符串
+  messageParser(...args: any[]) {
+    return args.map((message) => {
+      try {
+        if (isString(message)) {
+          return message;
+        }
+        return JSON.stringify(message);
+      } catch (error) {
+        console.log("messageParser 出现错误的值");
+        return "错误的值";
+      }
+    });
+  }
+  /**
+   * 添加插件
+   * @param plugin Function
+   * @returns
+   */
+  private plugins: Object = {};
+  // 如何通过this[name]使用 plugins
+  // addPlugins(name: string, plugin: Function): AbstractLogger {
+  //   this.plugins[name] = plugin.bind(this);
+  //   return this;
+  // }
+  // removePlugins(name: string): AbstractLogger {
+  //   if (this.plugins[name]) delete this.plugins[name];
+  //   return this;
+  // }
+  /**
+   * 简单添加插件
+   * @param plugin
+   * @returns
+   */
+  use(plugin: Function) {
+    return plugin(this);
   }
 }
 

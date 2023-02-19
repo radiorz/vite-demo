@@ -21,7 +21,7 @@ export default class ConsoleLogger extends AbstractLogger {
     super(options);
   }
   private _toFinalMessage(messages: Message): string {
-    const thePrefix = [this.name, this.tag, ...this.prefixes]
+    const thePrefix = [this.name, this.tag, ...(this.prefixes || [])]
       .filter((a) => !isNil(a))
       .join("|");
     return `[${this.level}] [${thePrefix}] ${messages.join(",")}`;

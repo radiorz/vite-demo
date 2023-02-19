@@ -1,4 +1,4 @@
-import { logger } from "~/plugins/logger";
+// import logger from "~/plugins/logger";
 import testRoutes from "~pages";
 // const nestRoute = { path: "nest", name: "nest" };
 // let currentRoute = {};
