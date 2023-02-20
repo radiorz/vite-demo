@@ -13,44 +13,50 @@
  */
 
 import AbstractLogger from "./AbstractLogger";
-import fs from "fs";
 import { LEVELS } from "../consts";
+import { curryRight } from "lodash";
+import { toJsonStringify } from "../parser";
+import fs from "fs";
+import { resolve } from "node:path";
+import { addLevel, joinBySpace } from "../parser/index";
+
+export const appendStringToFile = (message: string, path: string) => {
+  if (!path) {
+    return;
+  }
+  fs.appendFile(resolve(path), message, function (err) {
+    if (err) throw err;
+  });
+};
 export default class FileLogger extends AbstractLogger {
   constructor(options: any) {
     super(options);
     Object.assign(this, options);
   }
-  private _messageParse(message: string[], level: string): string {
-    const thePrefix = [this.name, this.tag, ...this.prefixes]
-      .filter((v) => !v)
-      .join("|");
-    return `\n[${level}] ${thePrefix} ${message.join(",")}`;
-  }
+
+  // common parsers
+  protected parsers: Function[] = [toJsonStringify];
+  protected debugParsers: Function[] = [curryRight(addLevel)(LEVELS.debug)];
+  protected infoParsers: Function[] = [curryRight(addLevel)(LEVELS.info)];
+  protected warnParsers: Function[] = [curryRight(addLevel)(LEVELS.warn)];
+  protected errorParsers: Function[] = [curryRight(addLevel)(LEVELS.error)];
+  protected finalParsers: Function[] = [
+    joinBySpace,
+    // 换行一下
+    (message: string) => {
+      return `${message}\n`;
+    },
+    (message: string) => {
+      appendStringToFile(message, this.path);
+    },
+  ];
+
   public _path: string = "";
-  setFile(path: string) {
+  setPath(path: string) {
     this._path = path;
     return this;
   }
-  private _toSave(message: any, level: LEVELS) {
-    const _message = this._messageParse(message, LEVELS[level]);
-    if (!this._path) {
-      console.log("123");
-      return;
-    }
-    fs.appendFile(this._path, _message, function (err) {
-      if (err) throw err;
-    });
-  }
-  _debug(message: string[]) {
-    this._toSave(message, LEVELS.debug);
-  }
-  _error(message: string[]) {
-    this._toSave(message, LEVELS.error);
-  }
-  _info(message: string[]) {
-    this._toSave(message, LEVELS.info);
-  }
-  _warn(message: string[]) {
-    this._toSave(message, LEVELS.warn);
+  get path() {
+    return this._path;
   }
 }

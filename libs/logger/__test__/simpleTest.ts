@@ -6,7 +6,7 @@ import ILogger from "../src/ILogger";
 import AbstractLogger from "../src/Logger/AbstractLogger";
 // 不同的
 const fileLogger = LoggerFactory.create("", TYPES.FileLogger);
-(fileLogger as Loggers.FileLogger).setFile(
+(fileLogger as Loggers.FileLogger).setPath(
   "D:/code/frontend-demo/libs/logger/__test__/1.log"
 );
 fileLogger.info("123");
@@ -17,13 +17,13 @@ fileLogger.info("zcxvzcv");
 fileLogger.warn("sdfasdf");
 fileLogger.error("adsfadf");
 
-// // 修改权限设置
-// defaultLogger.debug("123");
-// defaultLogger.setLevel(LEVELS.info);
-// defaultLogger.debug("123");
-// defaultLogger.info("123");
-// defaultLogger.setLevel(null);
-// defaultLogger.debug("123123123");
+// ****** 修改权限设置 ******
+defaultLogger.debug("123");
+defaultLogger.setLevel(LEVELS.info);
+defaultLogger.debug("123");
+defaultLogger.info(globalThis);
+defaultLogger.setLevel(null);
+defaultLogger.debug("123123123");
 
 // // 自己搞一个实例
 // const myLogger = LoggerFactory.create("myLogger", Loggers.FileLogger);
@@ -37,20 +37,22 @@ fileLogger.error("adsfadf");
 // `,
 //   logger123.tag
 // );
+// ****** 使用 use  ******
+// const logger = fileLogger.use(function (logger: any) {
+//   logger.$a = () => {
+//     console.log(123);
+//   };
+//   console.log(`logger.prototype`, logger.prototype);
+//   return logger;
+// });
 
-const logger = fileLogger.use(function (logger: any) {
-  logger.$a = () => {
-    console.log(123);
-  };
-  console.log(`logger.prototype`, logger.prototype);
-  return logger;
-});
-
-logger.$a();
-
-const logger2 = fileLogger.addPlugins("ttt", function () {
-  console.log(456);
-});
-logger2.usePlugins("ttt")();
-let func = logger2.useFunc("ttt");
-console.log(`func`, func());
+// logger.$a();
+// // ****** 添加 plugins ******
+// const logger2 = fileLogger.addPlugins("ttt", function () {
+//   console.log(456);
+// });
+// logger2.usePlugins("ttt")();
+// let func = logger2.useFunc("ttt");
+// if (logger2.hasOwnProperty(func)) {
+//   func();
+// }

@@ -12,34 +12,43 @@
  * @example
  */
 import AbstractLogger from "./AbstractLogger";
-const isNull = (value: any) => value === null;
-const isUndefined = (value: any) => typeof value === "undefined";
-const isNil = (value: any) => isNull(value) || isUndefined(value);
-type Message = string[];
+
+import { LEVELS } from "../consts";
+import { curryRight } from "lodash";
+import { addLevel, addPrefixes } from "../parser";
+// const toPrint = (messages: any[], level: LEVELS) => {
+//   console[LEVELS[level]](...messages);
+// };
+
+import { isNil } from "lodash";
 export default class ConsoleLogger extends AbstractLogger {
   constructor(options: any) {
     super(options);
   }
-  private _toFinalMessage(messages: Message): string {
-    const thePrefix = [this.name, this.tag, ...(this.prefixes || [])]
-      .filter((a) => !isNil(a))
-      .join("|");
-    return `[${this.level}] [${thePrefix}] ${messages.join(",")}`;
+  get allPrefixes() {
+    return [this.name, this.tag || "", ...this.prefixes].filter(
+      (v) => !isNil(v)
+    );
   }
-  _debug(message: Message) {
-    const messageStr = this._toFinalMessage(message);
-    console.debug(messageStr);
-  }
-  _info(message: Message) {
-    const messageStr = this._toFinalMessage(message);
-    console.debug(messageStr);
-  }
-  _warn(message: Message) {
-    const messageStr = this._toFinalMessage(message);
-    console.warn(messageStr);
-  }
-  _error(message: Message) {
-    const messageStr = this._toFinalMessage(message);
-    console.error(messageStr);
+  protected parsers: Function[] = [curryRight(addPrefixes)(this.allPrefixes)];
+  protected debugParsers: Function[] = [
+    curryRight(addLevel)(LEVELS.debug),
+    (messages: any[]) => console.debug(...messages),
+  ];
+  protected infoParsers: Function[] = [
+    curryRight(addLevel)(LEVELS.info),
+    (messages: any[]) => console.info(...messages),
+  ];
+  protected warnParsers: Function[] = [
+    curryRight(addLevel)(LEVELS.warn),
+    (messages: any[]) => console.warn(...messages),
+  ];
+  protected errorParsers: Function[] = [
+    curryRight(addLevel)(LEVELS.error),
+    (messages: any[]) => console.error(...messages),
+  ];
+  protected finalParsers: Function[] = [];
+  messageParser(...args: any[]) {
+    return args;
   }
 }

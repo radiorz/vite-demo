@@ -1,9 +1,8 @@
-import { isString } from "lodash";
 import { LEVELS } from "../consts";
+import { isString, curryRight } from "lodash";
 import ILogger from "../ILogger";
-const toMessageArray = (message: string | string[]) => {
-  return typeof message === "string" ? [message] : message;
-};
+import { doParsers } from "../parser/funcs";
+
 export default abstract class AbstractLogger implements ILogger {
   level: LEVELS | null = LEVELS.debug;
   constructor(public name: string = "") {
@@ -21,7 +20,6 @@ export default abstract class AbstractLogger implements ILogger {
     //   this[levelName] = func.bind(this);
     // }
   }
-  // abstract _messageParser:string;
   // 创建者模式
   setName(name: string) {
     this.name = name;
@@ -59,34 +57,54 @@ export default abstract class AbstractLogger implements ILogger {
     if (this.level < level) return false;
     return true;
   }
-  abstract _debug(message: string[]): void;
-  abstract _info(message: string[]): void;
-  abstract _warn(message: string[]): void;
-  abstract _error(message: string[]): void;
-
+  protected abstract parsers: Function[]; // any[] to any[]
+  protected abstract debugParsers: Function[];
+  protected abstract infoParsers: Function[];
+  protected abstract warnParsers: Function[];
+  protected abstract errorParsers: Function[];
+  protected abstract finalParsers: Function[];
+  doParsers(messages: any[]) {
+    return curryRight(doParsers)(this.parsers)(messages);
+  }
   debug(...messages: any[]) {
     if (!this.isLevelAllow(LEVELS.debug)) {
       return;
     }
-    this._debug(toMessageArray(this.messageParser(messages)));
+    doParsers(messages, [
+      ...this.parsers,
+      ...this.debugParsers,
+      ...this.finalParsers,
+    ]);
   }
   info(...messages: any[]) {
     if (!this.isLevelAllow(LEVELS.info)) {
       return;
     }
-    this._info(toMessageArray(this.messageParser(messages)));
+    doParsers(messages, [
+      ...this.parsers,
+      ...this.infoParsers,
+      ...this.finalParsers,
+    ]);
   }
   warn(...messages: any[]) {
     if (!this.isLevelAllow(LEVELS.warn)) {
       return;
     }
-    this._warn(toMessageArray(this.messageParser(messages)));
+    doParsers(messages, [
+      ...this.parsers,
+      ...this.warnParsers,
+      ...this.finalParsers,
+    ]);
   }
   error(...messages: any[]) {
     if (!this.isLevelAllow(LEVELS.error)) {
       return;
     }
-    this._error(toMessageArray(this.messageParser(messages)));
+    doParsers(messages, [
+      ...this.parsers,
+      ...this.errorParsers,
+      ...this.finalParsers,
+    ]);
   }
   // ****** tag ******
   // 快速创建一个新的logger库 只有 tag 不同
@@ -104,28 +122,14 @@ export default abstract class AbstractLogger implements ILogger {
     AbstractLogger.tags.set(proxy, tag);
     return proxy;
   }
-  // messageParser
-  // @override
-  // 默认就是将所有的message 转成字符串
-  messageParser(...args: any[]) {
-    return args.map((message) => {
-      try {
-        if (isString(message)) {
-          return message;
-        }
-        return JSON.stringify(message);
-      } catch (error) {
-        console.log("messageParser 出现错误的值");
-        return "错误的值";
-      }
-    });
-  }
+
   /**
    * 添加插件
    * @param plugin Function
    * @returns
    */
   private plugins: Record<string, Function> = {};
+  // 这里可以继续细化 keyof 和 返回值是 function 的函数
   useFunc(name: string) {
     return (this as Record<string, any>)[name] || this.plugins[name];
   }
