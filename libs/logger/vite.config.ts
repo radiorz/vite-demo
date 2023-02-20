@@ -2,7 +2,6 @@ import { defineConfig } from "vite";
 import { resolve } from "path";
 // 用于自动生成 d.ts 文件
 import dts from "vite-plugin-dts";
-// import dts from "rollup-plugin-dts";
 import path from "path-browserify";
 export default defineConfig({
   resolve: {
@@ -12,7 +11,7 @@ export default defineConfig({
     },
   },
 
-  plugins: [],
+  plugins: [dts()],
   build: {
     lib: {
       entry: resolve("src/index.ts"),

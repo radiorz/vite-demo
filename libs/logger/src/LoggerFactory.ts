@@ -1,15 +1,15 @@
-enum TYPES {
-  ConsoleLogger = "ConsoleLogger",
-  FileLogger = "FileLogger",
-}
+// enum TYPES {
+//   ConsoleLogger = "ConsoleLogger",
+//   FileLogger = "FileLogger",
+// }
 import AbstractLogger from "./Logger/AbstractLogger";
 import LoggerClass from "./ILoggerClass";
 import * as Loggers from "./Logger";
-export { TYPES };
+export type TYPES = keyof typeof Loggers;
 export default class LoggerFactory {
   public static create(
     name: string = "",
-    type: TYPES | LoggerClass = TYPES.ConsoleLogger
+    type: TYPES | LoggerClass = "ConsoleLogger"
   ): AbstractLogger {
     if (typeof type === "string") {
       if (!Loggers[type]) throw new Error("没有这个构造器" + type);

@@ -4,6 +4,7 @@
   "description": "日志打印",
   "scripts": {
     "build": "vite build",
+    "test": "vitest",
     "ncu": "ncu -u"
   },
   "main": "./dist/logger.umd.js",
@@ -20,12 +21,12 @@
   "license": "ISC",
   "devDependencies": {
     "vite": "^4.1.2",
-    "vite-plugin-dts": "^2.0.0-beta.1"
+    "vite-plugin-dts": "^2.0.0-beta.1",
+    "vitest": "^0.28.5"
   },
   "dependencies": {
     "lodash": "^4.17.21",
     "path-browserify": "^1.0.1",
-    "typescript": "^4.9.5",
-    "vitest": "^0.28.5"
+    "typescript": "^4.9.5"
   }
 }

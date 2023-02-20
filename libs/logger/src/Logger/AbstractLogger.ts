@@ -26,7 +26,7 @@ export default abstract class AbstractLogger implements ILogger {
     return this;
   }
   setLevel(level: LEVELS | null) {
-    this.level = level || null;
+    this.level = level;
     return this;
   }
   prefixes: string[] = [];

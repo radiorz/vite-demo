@@ -26,7 +26,7 @@ export default class ConsoleLogger extends AbstractLogger {
     super(options);
   }
   get allPrefixes() {
-    console.log("this.name", this.name);
+    // console.log("this.name", this.name);
     return [this.name, this.tag, ...this.prefixes].filter(
       (v) => !isNil(v)
     );

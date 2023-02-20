@@ -27,7 +27,7 @@ export const addLevel = (messages: any[], level: LEVELS) => {
   return [addSquareBrackets(levelKey), ...messages];
 };
 export function addPrefixes(messages: any[], prefixes: string[]) {
-  console.log(`prefixes`, prefixes);
+  // console.log(`prefixes`, prefixes);
   return [joinByVerticalBar(prefixes), ...messages];
 }
 export function joinBySpace(messages: any[]) {
