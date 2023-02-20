@@ -11,7 +11,7 @@ export default defineConfig({
     },
   },
 
-  plugins: [dts()],
+  plugins: [],
   build: {
     lib: {
       entry: resolve("src/index.ts"),
@@ -19,7 +19,7 @@ export default defineConfig({
       name: "logger",
     },
     rollupOptions: {
-      external: ["fs"],
+      external: ["fs", "path"],
     },
   },
 });

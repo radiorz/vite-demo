@@ -16,8 +16,8 @@ import AbstractLogger from "./AbstractLogger";
 import { LEVELS } from "../consts";
 import { curryRight } from "lodash";
 import { toJsonStringify } from "../parser";
-import fs from "fs";
-import { resolve } from "node:path";
+import * as fs from "fs";
+import { resolve } from "path";
 import { addLevel, joinBySpace } from "../parser/index";
 
 export const appendStringToFile = (message: string, path: string) => {

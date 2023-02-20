@@ -10,7 +10,7 @@ export default class LoggerFactory {
   public static create(
     name: string = "",
     type: TYPES | LoggerClass = TYPES.ConsoleLogger
-  ): AbstractLogger /** 这里应该说的是实现ILogger的 但是没有 */ {
+  ): AbstractLogger {
     if (typeof type === "string") {
       if (!Loggers[type]) throw new Error("没有这个构造器" + type);
       // 这里只有一种，或许可以设置多种
