@@ -1,5 +1,5 @@
 import { expect, test } from "vitest";
-import defaultLogger, { LEVELS } from "@tikkhun/logger";
+import defaultLogger, { LEVELS, Loggers } from "../src";
 import { random } from "lodash";
 test("setLevel works", () => {
   defaultLogger.setLevel(LEVELS.info);
@@ -18,9 +18,6 @@ test("setName works", () => {
   defaultLogger.setName(name);
   expect(defaultLogger.name).toBe(name);
 });
-test("debug,info,warn,error works", () => {
-  expect(defaultLogger.debug).toBeInstanceOf(Function);
-  expect(defaultLogger.info).toBeInstanceOf(Function);
-  expect(defaultLogger.warn).toBeInstanceOf(Function);
-  expect(defaultLogger.error).toBeInstanceOf(Function);
+test("defaultLogger is ConsoleLogger", () => {
+  expect(defaultLogger).toBeInstanceOf(Loggers.ConsoleLogger);
 });
