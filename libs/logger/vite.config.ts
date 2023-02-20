@@ -3,11 +3,12 @@ import { resolve } from "path";
 // 用于自动生成 d.ts 文件
 import dts from "vite-plugin-dts";
 // import dts from "rollup-plugin-dts";
-
+import path from "path-browserify";
 export default defineConfig({
   resolve: {
     alias: {
       "~": resolve("./src"),
+      path: "path-browserify",
     },
   },
 
@@ -19,7 +20,7 @@ export default defineConfig({
       name: "logger",
     },
     rollupOptions: {
-      external: ["fs", "path"],
+      external: ["fs"],
     },
   },
 });

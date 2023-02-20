@@ -7,7 +7,7 @@ import defaultLogger, {
 } from "../dist/logger.mjs";
 // 不同的
 const fileLogger = LoggerFactory.create("", TYPES.FileLogger);
-fileLogger.setPath("D:/code/frontend-demo/libs/logger/__test__/1.log");
+fileLogger.setPath("./1.log");
 fileLogger.debug("123");
 fileLogger.info("zcxvzcv");
 fileLogger.warn("sdfasdf");
