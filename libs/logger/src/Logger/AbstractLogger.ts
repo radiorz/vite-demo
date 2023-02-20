@@ -125,18 +125,24 @@ export default abstract class AbstractLogger implements ILogger {
    * @param plugin Function
    * @returns
    */
-  private plugins: Object = {};
+  private plugins: Record<string, Function> = {};
+  useFunc(name: string) {
+    return (this as Record<string, any>)[name] || this.plugins[name];
+  }
+  usePlugins(name: string) {
+    return this.plugins[name];
+  }
   // 如何通过this[name]使用 plugins
-  // addPlugins(name: string, plugin: Function): AbstractLogger {
-  //   this.plugins[name] = plugin.bind(this);
-  //   return this;
-  // }
-  // removePlugins(name: string): AbstractLogger {
-  //   if (this.plugins[name]) delete this.plugins[name];
-  //   return this;
-  // }
+  addPlugins(name: string, plugin: Function): AbstractLogger {
+    this.plugins[name] = plugin;
+    return this;
+  }
+  removePlugins(name: string): AbstractLogger {
+    if (this.plugins[name]) delete this.plugins[name];
+    return this;
+  }
   /**
-   * 简单添加插件
+   * 简单添加插件(风险较大 因为可以修改整个实例)
    * @param plugin
    * @returns
    */

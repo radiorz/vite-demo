@@ -42,7 +42,15 @@ const logger = fileLogger.use(function (logger: any) {
   logger.$a = () => {
     console.log(123);
   };
+  console.log(`logger.prototype`, logger.prototype);
   return logger;
 });
 
 logger.$a();
+
+const logger2 = fileLogger.addPlugins("ttt", function () {
+  console.log(456);
+});
+logger2.usePlugins("ttt")();
+let func = logger2.useFunc("ttt");
+console.log(`func`, func());
