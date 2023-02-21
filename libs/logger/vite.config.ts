@@ -3,6 +3,7 @@ import { resolve } from "path";
 // 用于自动生成 d.ts 文件
 import dts from "vite-plugin-dts";
 import path from "path-browserify";
+import nodeResolve from "@rollup/plugin-node-resolve";
 export default defineConfig({
   resolve: {
     alias: {
@@ -19,6 +20,7 @@ export default defineConfig({
       name: "logger",
     },
     rollupOptions: {
+      plugins: [nodeResolve()],
       external: ["fs"],
     },
   },

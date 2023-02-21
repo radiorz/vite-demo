@@ -1,5 +1,6 @@
 import { isString } from "lodash";
 import { LEVELS } from "../consts";
+import { addLevelColorful } from "./colorful";
 interface Parser {
   // ()=>any
 }
@@ -24,7 +25,7 @@ export function joinByVerticalBar(value: any[]) {
 }
 export const addLevel = (messages: any[], level: LEVELS) => {
   const levelKey = LEVELS[level].toUpperCase();
-  return [addSquareBrackets(levelKey), ...messages];
+  return [addLevelColorful(level)(addSquareBrackets(levelKey)), ...messages];
 };
 export function addPrefixes(messages: any[], prefixes: string[]) {
   // console.log(`prefixes`, prefixes);
