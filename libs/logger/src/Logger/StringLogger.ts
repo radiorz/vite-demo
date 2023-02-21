@@ -1,7 +1,7 @@
 /**
  * @author
- * @file FileLogger.js
- * @fileBase FileLogger
+ * @file StringLogger.js
+ * @fileBase StringLogger
  * @path libs\logger\src\logger-builder\FileLogger.js
  * @from 
  * @desc 
@@ -19,7 +19,7 @@ import { toJsonStringify } from "../parser";
 import * as fs from "fs";
 import { resolve } from "path";
 import { addLevel, joinBySpace } from "../parser/index";
-import StringLogger from "./StringLogger";
+
 export const appendStringToFile = (message: string, path: string) => {
   if (!path) {
     return;
@@ -28,32 +28,17 @@ export const appendStringToFile = (message: string, path: string) => {
     if (err) throw err;
   });
 };
-export default class FileLogger extends StringLogger {
+export default class StringLogger extends AbstractLogger {
   constructor(options: any) {
     super(options);
     Object.assign(this, options);
   }
 
-  protected finalParsers: Function[] = [
-    joinBySpace,
-    // 换行一下
-    (message: string) => {
-      return `${message}\n`;
-    },
-    (message: string) => {
-      appendStringToFile(message, this.path);
-    },
-  ];
-
-  private _path: string = "";
-  setPath(path: string) {
-    this._path = path;
-    return this;
-  }
-  set path(path) {
-    this._path = path;
-  }
-  get path() {
-    return this._path;
-  }
+  // common parsers
+  protected parsers: Function[] = [toJsonStringify];
+  protected debugParsers: Function[] = [curryRight(addLevel)(LEVELS.debug)];
+  protected infoParsers: Function[] = [curryRight(addLevel)(LEVELS.info)];
+  protected warnParsers: Function[] = [curryRight(addLevel)(LEVELS.warn)];
+  protected errorParsers: Function[] = [curryRight(addLevel)(LEVELS.error)];
+  protected finalParsers: Function[] = [joinBySpace];
 }

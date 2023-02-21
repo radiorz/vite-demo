@@ -12,3 +12,5 @@ const defaultLogger = LoggerFactory.create("", "ConsoleLogger");
 export default defaultLogger;
 
 // export { default as ILogger } from "./Logger/Interface";
+export * as parsers from "./parser";
+export * as colorfulParser from "./parser/colorful";

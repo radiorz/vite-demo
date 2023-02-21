@@ -70,7 +70,7 @@ export default abstract class AbstractLogger implements ILogger {
     if (!this.isLevelAllow(LEVELS.debug)) {
       return;
     }
-    doParsers(messages, [
+    return doParsers(messages, [
       ...this.parsers,
       ...this.debugParsers,
       ...this.finalParsers,
@@ -80,7 +80,7 @@ export default abstract class AbstractLogger implements ILogger {
     if (!this.isLevelAllow(LEVELS.info)) {
       return;
     }
-    doParsers(messages, [
+    return doParsers(messages, [
       ...this.parsers,
       ...this.infoParsers,
       ...this.finalParsers,
@@ -90,17 +90,17 @@ export default abstract class AbstractLogger implements ILogger {
     if (!this.isLevelAllow(LEVELS.warn)) {
       return;
     }
-    doParsers(messages, [
+    return doParsers(messages, [
       ...this.parsers,
       ...this.warnParsers,
       ...this.finalParsers,
     ]);
   }
-  error(...messages: any[]) {
+  error(...messages: any[]): any {
     if (!this.isLevelAllow(LEVELS.error)) {
       return;
     }
-    doParsers(messages, [
+    return doParsers(messages, [
       ...this.parsers,
       ...this.errorParsers,
       ...this.finalParsers,

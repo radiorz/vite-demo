@@ -25,6 +25,10 @@ export function joinByVerticalBar(value: any[]) {
 }
 export const addLevel = (messages: any[], level: LEVELS) => {
   const levelKey = LEVELS[level].toUpperCase();
+  return [addSquareBrackets(levelKey), ...messages];
+};
+export const addColorLevel = (messages: any[], level: LEVELS) => {
+  const levelKey = LEVELS[level].toUpperCase();
   return [addLevelColorful(level)(addSquareBrackets(levelKey)), ...messages];
 };
 export function addPrefixes(messages: any[], prefixes: string[]) {
