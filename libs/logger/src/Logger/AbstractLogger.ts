@@ -2,9 +2,13 @@ import { LEVELS } from "../consts";
 import { isString, curryRight } from "lodash";
 import ILogger from "../ILogger";
 import { doParsers } from "../parser/funcs";
+enum LIFECYCLES {
+  before = "before",
+  during = "during",
+  after = "after",
+}
 
 export default abstract class AbstractLogger implements ILogger {
-  level: LEVELS | null = LEVELS.debug;
   constructor(public name: string = "") {
     // FIXME 这里不被认可...
     // for (const level in LEVELS) {
@@ -19,6 +23,12 @@ export default abstract class AbstractLogger implements ILogger {
     //   };
     //   this[levelName] = func.bind(this);
     // }
+  }
+  // ****** 责任链 ******
+  nextLogger: AbstractLogger | null = null;
+  setNextLogger(nextLogger: AbstractLogger): AbstractLogger {
+    this.nextLogger = nextLogger;
+    return this;
   }
   // 创建者模式
   setName(name: string) {
@@ -52,6 +62,7 @@ export default abstract class AbstractLogger implements ILogger {
     }
     return this;
   }
+  level: LEVELS | null = LEVELS.debug;
   private isLevelAllow(level: LEVELS) {
     if (this.level === null) return true;
     if (this.level < level) return false;
@@ -66,45 +77,52 @@ export default abstract class AbstractLogger implements ILogger {
   doParsers(messages: any[]) {
     return curryRight(doParsers)(this.parsers)(messages);
   }
+  // addParsers(level: LEVELS | null, func: Function) {}
+  // removeParsers() {}
+  getLevelParsers(level: LEVELS): Function[] {
+    return [
+      ...this.parsers,
+      ...(this as any)[LEVELS[level] + "Parsers"],
+      ...this.finalParsers,
+    ].filter((func) => {
+      return func instanceof Function;
+    });
+  }
   debug(...messages: any[]) {
     if (!this.isLevelAllow(LEVELS.debug)) {
       return;
     }
-    return doParsers(messages, [
-      ...this.parsers,
-      ...this.debugParsers,
-      ...this.finalParsers,
-    ]);
+    doParsers(messages, this.getLevelParsers(LEVELS.debug));
+    if (this.nextLogger) {
+      this.nextLogger.debug(messages);
+    }
   }
   info(...messages: any[]) {
     if (!this.isLevelAllow(LEVELS.info)) {
       return;
     }
-    return doParsers(messages, [
-      ...this.parsers,
-      ...this.infoParsers,
-      ...this.finalParsers,
-    ]);
+    doParsers(messages, this.getLevelParsers(LEVELS.info));
+    if (this.nextLogger) {
+      this.nextLogger.info(messages);
+    }
   }
   warn(...messages: any[]) {
     if (!this.isLevelAllow(LEVELS.warn)) {
       return;
     }
-    return doParsers(messages, [
-      ...this.parsers,
-      ...this.warnParsers,
-      ...this.finalParsers,
-    ]);
+    doParsers(messages, this.getLevelParsers(LEVELS.warn));
+    if (this.nextLogger) {
+      this.nextLogger.warn(messages);
+    }
   }
   error(...messages: any[]): any {
     if (!this.isLevelAllow(LEVELS.error)) {
       return;
     }
-    return doParsers(messages, [
-      ...this.parsers,
-      ...this.errorParsers,
-      ...this.finalParsers,
-    ]);
+    doParsers(messages, this.getLevelParsers(LEVELS.error));
+    if (this.nextLogger) {
+      this.nextLogger.error(messages);
+    }
   }
   // ****** tag ******
   // 快速创建一个新的logger库 只有 tag 不同

@@ -1,4 +1,5 @@
 import { expect, test, vi } from "vitest";
+import chalk from "chalk";
 // 简单测试
 import defaultLogger, { LoggerFactory, LEVELS, Loggers } from "../src";
 import ConsoleLogger from "../dist/Logger/ConsoleLogger";
@@ -35,10 +36,26 @@ test("consoleLogger.debug call console.debug by ...args", () => {
   log.debug(message1);
   // 次数
   expect(spy).toHaveBeenCalledTimes(1);
-  expect(_messages).toEqual(["[DEBUG]", name, message1]);
+  expect(_messages).toEqual([chalk.blue("[DEBUG]"), name, message1]);
   log.debug(message);
-  expect(_messages).toEqual(["[DEBUG]", name, message]);
+  expect(_messages).toEqual([chalk.blue("[DEBUG]"), name, message]);
   expect(spy).toHaveBeenCalledTimes(2);
+});
+test("name works", () => {
+  const name = "log";
+  const log = LoggerFactory.create(name, "ConsoleLogger");
+
+  const tag1 = "tag1";
+  let _messages;
+  const spy = vi.spyOn(console, "debug").mockImplementation((...args) => {
+    _messages = args;
+  });
+  log.debug();
+  expect(_messages).toEqual([chalk.blue("[DEBUG]"), name]);
+  const name2 = "name2";
+  log.setName(name2);
+  log.debug();
+  expect(_messages).toEqual([chalk.blue("[DEBUG]"), name2]);
 });
 test("tag works ", () => {
   const name = "log";
@@ -54,7 +71,8 @@ test("tag works ", () => {
     _messages = args;
   });
   tagLog.debug();
+  console.log(`tagLog.tag`, tagLog.tag);
   // 次数
-  expect(_messages).toEqual(["[DEBUG]", name, tag1]);
+  expect(_messages).toEqual([chalk.blue("[DEBUG]"), [name, tag1].join("|")]);
   expect(spy).toHaveBeenCalledTimes(1);
 });

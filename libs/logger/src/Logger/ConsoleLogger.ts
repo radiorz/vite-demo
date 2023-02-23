@@ -25,8 +25,11 @@ export default class ConsoleLogger extends AbstractLogger {
   constructor(options: any) {
     super(options);
   }
-  get allPrefixes() {
-    return [this.name, this.tag, ...this.prefixes].filter((v) => !isNil(v));
+  get allPrefixes(): string[] {
+    console.log(`this.tag`, this.tag);
+    return [this.name, this.tag, ...this.prefixes].filter(
+      (v) => typeof v !== "undefined"
+    );
   }
   protected parsers: Function[] = [
     (messages: any[]) => addPrefixes(messages, this.allPrefixes),
