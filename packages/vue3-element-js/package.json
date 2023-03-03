@@ -35,7 +35,7 @@
     "@types/node": "18.11.17",
     "@types/nprogress": "^0.2.0",
     "@types/overlayscrollbars": "^1.12.1",
-    "@vitejs/plugin-legacy": "^3.0.1",
+    "@vitejs/plugin-legacy": "^4.0.1",
     "@vitejs/plugin-vue": "^4.0.0",
     "@vitejs/plugin-vue-jsx": "^3.0.0",
     "autoprefixer": "^10.4.13",
