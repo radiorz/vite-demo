@@ -43,9 +43,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "lerna": "^6.1.0"
+    "lerna": "^6.5.1"
   },
   "dependencies": {
-    "scripy": "^0.3.0"
   }
 }

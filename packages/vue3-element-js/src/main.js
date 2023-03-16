@@ -13,7 +13,8 @@ import "~/style/index.scss"; // global css
 import "overlayscrollbars/overlayscrollbars.css";
 import { OverlayScrollbarsComponent } from "overlayscrollbars-vue";
 
-
+import Avue from "@smallwei/avue";
+import "@smallwei/avue/lib/index.css";
 
 // app.js
 
@@ -21,6 +22,7 @@ useRegisterSW();
 const app = createApp(App);
 useInject(app);
 app.component("OverlayScrollbars", OverlayScrollbarsComponent);
+app.use(Avue);
 app.use(i18n);
 app.use(createPinia());
 registerStore();

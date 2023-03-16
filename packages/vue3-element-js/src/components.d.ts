@@ -7,6 +7,7 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    Avue: typeof import('./components/Avue.vue')['default']
     CommonLayout: typeof import('./components/Layout/CommonLayout.vue')['default']
     DefaultLoading: typeof import('./components/Loading/DefaultLoading.vue')['default']
     ElAside: typeof import('element-plus/es')['ElAside']
@@ -34,6 +35,7 @@ declare module '@vue/runtime-core' {
     IEpSunny: typeof import('~icons/ep/sunny')['default']
     LocaleSwitch: typeof import('./components/LocaleSwitch.vue')['default']
     Login: typeof import('./components/Form/Login/index.vue')['default']
+    LoginForm: typeof import('./components/LoginForm.vue')['default']
     MarqueeText: typeof import('./components/MarqueeText/index.vue')['default']
     NumberInput: typeof import('./components/Widgets/NumberInput.vue')['default']
     PaginationTable: typeof import('./components/Table/PaginationTable.vue')['default']
