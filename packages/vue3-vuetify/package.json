@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@mdi/font": "7.1.96",
+    "@mdi/font": "7.2.96",
     "pinia": "^2.0.28",
     "roboto-fontface": "*",
     "vue": "^3.2.45",
